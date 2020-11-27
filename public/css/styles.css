@@ -1,0 +1,59 @@
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.1 ), rgba(0,0,0,0.5)), url("/img/clouds.jpg");
+  background-size: cover;
+  background-position: center; 
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  
+}
+
+
+
+
+nav a{
+  text-transform: uppercase;
+}
+nav a span{
+  font-weight: bold;
+}
+nav .sidenav-trigger{
+  margin: 0 0;
+}
+.nav-item{  
+  width: 300px;
+}
+p{
+  text-align: justify;
+  line-height: 1.5 ;
+  font-size: 19px;
+}
+
+
+.box{
+  color: #fff;
+  display: none; 
+}
+
+
+table, td, th {
+  border: 1px solid black;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

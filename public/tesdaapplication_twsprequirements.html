@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/req.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <title>      ASCB CHED-TESDA Scholarship Information System
+    </title>
+  </head>
+  <body>
+    <div id="app" class="container  mt-5">
+      
+          
+
+          <div class="card">
+            <div class="card-header card-header-primary">
+              <h5>Requirements For TESDA | TWSP Scholarship </h5> 
+              <script>
+                var requirements=0;
+              </script>
+            </div>
+            <div class="card-body">
+              <form name="statusForm" id="statusForm" > 
+                <div class="form-group row">  
+                  <div class="col-md-8 mx-auto">
+  
+                    <label id="info1" >  
+                      <input name="NSO" type="file"  id="NSO" accept="image/*" style=" position: absolute; z-index: -1; width: .1in; height: .1in;" required>
+                      <b>  1 Photocopy of NSO Birth Certificate </b> <span class="material-icons">      attach_file  </span><br>
+                    </label>
+                   
+
+                    <label id="info2" class="mt-2">  
+                      <input name="Marriage" type="file"  id="Marriage" accept="image/*" style=" position: absolute; z-index: -1; width: .1in; height: .1in;">
+                      <b>   1 Photocopy of Marriage Contract (for married female)  </b><span class="material-icons">      attach_file  </span><br>
+                    </label>
+
+                    <label id="info3" class="mt-2">  
+                      <input name="Diploma" type="file"  id="Diploma" accept="image/*" style=" position: absolute; z-index: -1; width: .1in; height: .1in;" required>
+                      <b>  1 Photocopy of High School Diploma/Form 137/Transcript of Records </b><span class="material-icons">      attach_file  </span><br>
+                    </label>
+
+                    <label  id="info4" class="mt-2">  
+                      <input name="passport" type="file"  id="passport" accept="image/*" style=" position: absolute; z-index: -1; width: .1in; height: .1in;" required>
+                      <b>   3 passport size ID pictures (white background, with collar) </b><span class="material-icons">      attach_file  </span><br>
+                    </label>
+                    
+                    <label id="info5" class="mt-2">   
+                      <input name="picture" type="file"  id="picture" accept="image/*" style=" position: absolute; z-index: -1; width: .1in; height: .1in;" required>
+                      <b>  5 1x1 ID picture (white background, with collar)  </b><span class="material-icons">      attach_file  </span><br>
+                    </label>
+
+                
+                  </div>  
+                  <div>
+                    <!-- <div id="info1"></div> -->
+                    <!-- <div id="info2"></div>
+                    <div id="info3"></div>
+                    <div id="info4"></div>
+                    <div id="info5"></div> -->
+                    
+                  
+                  </div>
+                 
+                   
+                </div>
+                
+              </form>
+              <div id="tesdacontent">
+                <a href="/user.html" style="text-decoration: underline;"> <button class="btn btn-success pull-right"> Done   </button></a>
+        
+              </div>
+            </div>
+          </div>
+         
+      
+      <!-- attached review -->
+      
+         
+       
+      
+       
+    </div>
+   
+ 
+    <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+   
+   
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+
+    <!-- <script src="/js/jsdatabase/functions_tesdastep.js"></script>
+    <script src="/js/jsdatabase/script_tesdastep.js"></script> -->
+  
+    <script>
+
+
+
+      var firebaseConfig = {
+          apiKey: "AIzaSyD__F-N2U7KViRAxUEaNDz3P_Fp63MrPzk",
+          authDomain: "sisascb.firebaseapp.com",
+          databaseURL: "https://sisascb.firebaseio.com",
+          projectId: "sisascb",
+          storageBucket: "sisascb.appspot.com",
+          messagingSenderId: "616128933101",
+          appId: "1:616128933101:web:82691722438e08c7d070e4",
+          measurementId: "G-56W55HQ6QK"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig); 
+      
+
+        var user = firebase.auth().currentUser;
+      console.log(user)
+      // var requirements = firebase.database().ref().child("Tesda/Step_applicants/").orderByChild("uid").equalTo(user.uid);
+
+      // requirements.on("value", function(tesdacontent){
+      //   if(tesdacontent.exists){
+      //     var tesdacontentHtml ="";
+          
+      //     tesdacontent.forEach(function(singletesdacontent){
+      //       requirements = requirements + 1;
+ 
+      //           tesdacontentHtml += "<div class='mt-2 pb-2'> <img width='70%' height='auto' style='display:block; margin: 0 auto; object-fit: contain;' src='";
+      //             tesdacontentHtml += singletesdacontent.val().NSOrequirement;              
+      //           tesdacontentHtml += "'/> </div>";
+              
+      //     });
+      //     $("#tesdacontent").html(tesdacontentHtml); 
+
+
+      //   }
+      // });
+
+
+      
+       
+      
+      var NSOreq = document.getElementById('NSO');
+      NSOreq.addEventListener("change",function(e){
+        var NSOreqfile= e.target.files[0]; 
+        //create storage ref to the firebase storage
+        var NSOreqfilestorageRef = firebase.storage().ref('TWSP_applicants Requirements').child(NSOreqfile.name);
+        var NSOreqfiletask = NSOreqfilestorageRef.put(NSOreqfile);
+        NSOreqfiletask.on("state_changed",function(snapshot){
+            var NSOpercentage= (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+            if(NSOpercentage==100){
+              NSOreqfilestorageRef.getDownloadURL().then(function(downdloadURL){
+              
+                // storageRef.getDownloadURL().then(function (url) {
+                //   // You will get the Url here. 
+                  
+              var arootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+              var auserID = firebase.auth().currentUser.uid;
+              var ausersRef = arootRef.child(auserID); 
+               
+              var NSOreq = {
+                "NSOrequirement": downdloadURL,
+
+              };
+              ausersRef.update(NSOreq).then(function(){
+                  // alert("Image Uploaded and also updated to the database");
+                  document.getElementById('info1').innerHTML = "Required NSO <i style='font-weight: bold; font-style: underlined;'>" + NSOreqfile.name + "</i> was successfully attached!";
+                    
+                }); 
+                 
+              
+              });
+            }
+        });
+      });
+      
+      
+      var Marriagereq = document.getElementById('Marriage');
+      Marriagereq.addEventListener("change",function(e){
+        var Marriagereqfile= e.target.files[0]; 
+        //create storage ref to the firebase storage
+        var MarriagestorageRef = firebase.storage().ref('TWSP_applicants Requirements').child(Marriagereqfile.name);
+        var Marriagereqtask = MarriagestorageRef.put(Marriagereqfile);
+        Marriagereqtask.on("state_changed",function(snapshot){
+            var percentage= (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+            if(percentage==100){
+              MarriagestorageRef.getDownloadURL().then(function(downdloadURL){
+              
+                // storageRef.getDownloadURL().then(function (url) {
+                //   // You will get the Url here. 
+                  
+              var rootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+              var userID = firebase.auth().currentUser.uid;
+              var usersRef = rootRef.child(userID); 
+               
+              var Marriagereq = {
+                "marriagerequirement": downdloadURL,
+
+              };
+              usersRef.update(Marriagereq).then(function(){
+                    // alert("Image Uploaded and also updated to the database");
+                    // window.location.href = "/examples/chedapplication_requirements.html";  
+          document.getElementById('info2').innerHTML = " Required Marriage Contract  <i style='font-weight: bold; font-style: underlined;'>" + Marriagereqfile.name + "</i> was successfully attached!";
+
+                }); 
+                 
+              
+              });
+            }
+        });
+      });
+      
+
+      var Diplomareq = document.getElementById('Diploma');   
+      Diplomareq.addEventListener("change",function(e){
+        var user = firebase.auth().currentUser;
+
+        var Diplomareqfile= e.target.files[0]; 
+        //create storage ref to the firebase storage
+        var DiplomastorageRef = firebase.storage().ref('TWSP_applicants Requirements').child(Diplomareqfile.name);
+        var Diplomareqtask = DiplomastorageRef.put(Diplomareqfile);
+        Diplomareqtask.on("state_changed",function(snapshot){
+            var Diplomapercentage= (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+            if(Diplomapercentage==100){
+              DiplomastorageRef.getDownloadURL().then(function(downdloadURL){
+              
+                // storageRef.getDownloadURL().then(function (url) {
+                //   // You will get the Url here. 
+                  
+              var DiplomarootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+              var DiplomauserID = firebase.auth().currentUser.uid;
+              var DiplomausersRef = DiplomarootRef.child(DiplomauserID); 
+               
+              var Diplomareq = {
+                "diplomarequirement": downdloadURL,
+
+              };
+              DiplomausersRef.update(Diplomareq).then(function(){
+                document.getElementById('info3').innerHTML = "Required High School Diploma/Form 137/Transcript of Records <i style='font-weight: bold; font-style: underlined;'>" + Diplomareqfile.name + "</i> was successfully attached!";
+
+                    // alert("Image Uploaded and also updated to the database");
+                    // window.location.href = "/examples/chedapplication_requirements.html";  
+                }); 
+                 
+              
+              });
+            }
+        });
+      });
+      
+
+      var passportreq = document.getElementById('passport');
+      passportreq.addEventListener("change",function(e){
+        var passportreqfile= e.target.files[0]; 
+        //create storage ref to the firebase storage
+        var passportstorageRef = firebase.storage().ref('STEP_applicants Requirements').child(passportreqfile.name);
+        var passportreqtask = passportstorageRef.put(passportreqfile);
+        passportreqtask.on("state_changed",function(snapshot){
+            var passportpercentage= (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+            if(passportpercentage==100){
+              passportstorageRef.getDownloadURL().then(function(downdloadURL){
+              
+                // storageRef.getDownloadURL().then(function (url) {
+                //   // You will get the Url here. 
+                  
+              var passportrootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+              var passportuserID = firebase.auth().currentUser.uid;
+              var passportusersRef = passportrootRef.child(passportuserID); 
+               
+              var passportreq = {
+                "passportrequirement": downdloadURL,
+
+              };
+              passportusersRef.update(passportreq).then(function(){
+                document.getElementById('info4').innerHTML = "Required passport size ID pictures <i style='font-weight: bold; font-style: underlined;'>" + passportreqfile.name + "</i> was successfully attached!";
+
+                    // alert("Image Uploaded and also updated to the database");
+                    // window.location.href = "/examples/chedapplication_requirements.html";  
+                }); 
+                 
+              
+              });
+            }
+        });
+      });     
+
+
+       var picturereq = document.getElementById('picture');    
+       picturereq.addEventListener("change",function(e){
+        var picturereqfile= e.target.files[0]; 
+        //create storage ref to the firebase storage
+        var picturestorageRef = firebase.storage().ref('TWSP_applicants Requirements').child(picturereqfile.name);
+        var picturereqtask = picturestorageRef.put(picturereqfile);
+        picturereqtask.on("state_changed",function(snapshot){
+            var picturepercentage= (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+            if(picturepercentage==100){
+              picturestorageRef.getDownloadURL().then(function(downdloadURL){
+               
+                  
+              var picturerootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+              var pictureuserID = firebase.auth().currentUser.uid;
+              var pictureusersRef = picturerootRef.child(pictureuserID); 
+               
+              var picturereq = {
+                "picturerequirement": downdloadURL,
+
+              };
+              pictureusersRef.update(picturereq).then(function(){
+          document.getElementById('info5').innerHTML = "Required 1x1 ID picture <i style='font-weight: bold; font-style: underlined;'>" + picturereqfile.name + "</i> was successfully attached!";
+
+                    // alert("Image Uploaded and also updated to the database");
+                    // window.location.href = "/examples/chedapplication_requirements.html";  
+                }); 
+                 
+              
+              });
+            }
+        });
+      });      
+      
+
+
+     
+
+   
+
+     
+</script>
+      
+
+
+
+
+
+    </body>
+  </html>

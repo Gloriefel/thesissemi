@@ -1,0 +1,348 @@
+ 
+  .databasetext{
+    font-size: 13px;
+    font-weight: bold; 
+    text-align: center;
+  }
+  .shade{
+    background-color: rgb(233, 233, 233);
+  }
+
+
+/* CHED Form css */
+/* headersetup */
+li{
+  list-style: none;
+}
+  #fillform input{
+    height: 5%;
+    width: 5%;
+    font-size: 13; 
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .centertext{
+    text-align: center;
+    font-weight: bold;
+  }
+  .container{
+    margin: 0 0;
+  }
+  .capslock{
+    text-transform: uppercase;
+  }
+  
+  .headerfont {
+    font-size: 10px;
+  }
+  
+  .guide{
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 0px;
+  }
+  
+  .container ul{
+    margin-bottom: 0px;
+  }
+  
+  
+  #chedpersonalinfo ul{
+    margin: 0px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: .3fr 1.9fr 1.3fr .8fr 1.4fr;
+    margin-bottom: 0px;
+  
+  } 
+  td, th{
+    padding: 2px 0px;
+  }
+  
+  #firstthree ul{
+    display: grid;
+    grid-template-columns: .4fr 1.1fr .7fr 1.7fr;
+    margin: 0px;
+    text-align: center;
+  
+  } 
+  
+  #regionoffice input, #chedpersonalinfo input, #firstthree input, #twothree input , #fistfour input,  #familyback input,
+   #secondtothelast input , #schoolintended input, #schoolintendedadd input , #degreeprog input, #type1 input
+   #type2 input, #inst1 input, #inst1 input , #dateaccomplished input
+   {
+    height: 1.8em;
+    text-align: center;
+    background-color: rgb(240, 237, 233);
+    margin-bottom: 0px;
+  }
+  
+  .guidetwo{
+    font-size: 10px;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 2px;
+
+  }
+  
+  #twothree ul{
+    display: grid;
+    grid-template-columns: .4fr 1.1fr .7fr 1.7fr;
+    margin-bottom: 0px;
+  }
+  
+  #status ul{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    padding: 0%;
+  }
+  
+  #status li, #gender ul , #sector ul{
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+    padding: 0%; 
+  }
+  
+  
+  
+  #guidetwo ul{
+    border: solid;
+    border-width: thin;
+  }
+  
+  label{
+    display: none;
+    color: black;
+    
+  }
+   #fistfour ul {
+    display: grid;
+    grid-template-columns: .6fr .9fr .7fr 1.7fr;
+    margin-bottom: 0px;
+   }
+  
+   #familyback ul{
+    display: grid;
+    grid-template-columns: .8fr 1fr 1fr 1.2fr;
+    margin-bottom: 0px;
+   }
+  
+   #school ul{
+    display: grid;
+    grid-template-columns:  1fr 4fr;
+    margin-bottom: 0px;
+   }
+  
+   #school input, #assistance input, #signature input, #checkedtwo input, #stufapsignature input{
+    height: 2em;
+    text-align: center; 
+    margin-bottom: 0px;
+    background-color: rgb(240, 237, 233);
+
+  }
+  
+  #assistance ul, #signature ul{
+    display: grid;
+    grid-template-columns:  1.7fr 2fr;
+    margin-bottom: 0px;
+  }
+  #check ul{
+    display: grid;
+    grid-template-columns:  1fr 1fr ;
+    margin-bottom: 0px;
+  }
+  
+  #checkedtwo ul{
+    display: grid;
+    grid-template-columns:  1.4fr 1fr ;
+    margin-bottom: 0px;
+  }
+  #secondtothelast ul{
+    display: grid;
+    grid-template-columns:  .5fr 3fr ;
+    margin-bottom: 0px;
+  }
+  
+  #stufapsignature ul{
+    display: grid;
+    grid-template-columns:  1.3fr 2fr ;
+    margin-bottom: 0px;
+  }
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+  
+ 
+  /* TESDA css */
+  .tesdadatabasetext{
+    font-size: 15px;
+    font-weight: bold; 
+    text-align: center;
+  }
+  #header ul{
+    display: grid;
+    grid-template-columns: .5fr 3fr .5fr;
+  }
+
+  .bordertesda {
+    border: solid;
+    border-width: thin;
+  }
+
+  #applicantprof ul{
+    display: grid;
+    grid-template-columns: .6fr 3fr .6fr;
+  }
+
+  .fontnormal {
+    font-size: 12px;
+  }
+
+  .titleset{
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .backgroundcolor{
+    background-color: rgb(228, 232, 235);
+  }
+
+  .normalfont{
+    font-size: 12px;
+  }
+
+  #identifiernum ul{
+    display: grid;
+    grid-template-columns: .2fr .6fr 2fr .4fr 1fr;
+  }
+ 
+  #number ul{
+    display: grid;
+    grid-template-columns: .2fr  .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr .2fr;
+  }
+
+  #personalinfo input, #birth input, #birthplace input, #guardian input, #choice input{
+    height: 1.7em;
+    text-align: center; 
+    margin-bottom: 0px;
+    background-color: rgb(240, 237, 233);
+    
+    border: solid;
+    border-width: thin;
+
+  }
+  #number input{
+    height: 1.7em;
+    text-align: center; 
+    margin-bottom: 0px; 
+    border: solid;
+    border-width: thin;
+  }
+  #choice ul{
+    display: grid;
+    grid-template-columns: 1.4fr 4fr;
+    margin: 5px 0;
+  }
+
+
+  #personalinfo ul{
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr 1fr; 
+  }
+
+  h6#personalinfo{
+    text-align: center;  
+  }
+  
+  #status ul, #birth ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #birth ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr .2fr;
+  }
+ 
+
+  #birthplace ul{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr 1.1fr 1fr ;
+  }
+
+  #birthplace input, #classification input{
+   margin-left: 2px;
+
+  }
+
+  #attainment ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  #attainment li{
+    padding-left: 4px;
+  }
+
+  #guardian ul{
+    display: grid;
+    grid-template-columns: .6fr 1fr 1.4fr;
+  }
+
+  #classification ul, #tesdasign ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .tesdasign ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+  }
+
+  #tesdasign ul{
+    display: grid;
+    grid-template-columns: 1.3fr 1fr .8fr;
+    height: 35%;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @media screen and (max-width: 1200px) {
+  
+
+  }
+
+
+  /* mobile view */
+  @media screen and (max-width: 768px) {
+    
+
+  }
+  @media screen and (max-width: 480px){
+ 
+}
+
+ 

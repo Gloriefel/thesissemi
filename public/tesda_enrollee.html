@@ -1,0 +1,619 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+   ASCB CHED-TESDA Scholarship Information System
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link type="text/css" href="/css/fillup.css" rel="stylesheet">
+
+  <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  
+     <!-- <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+       -->
+
+
+     
+</head>
+
+<body>
+
+
+
+<div id="userpage">
+
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="/img/icons/icon128x128.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+    <div class="logo">
+      <a href="/homepage.html" class="simple-text logo-normal" style="text-transform: lowercase;">
+        <img src="/img/tesda.png"  width="50px" height="50px" class="float-left ml-2">
+
+      <h6 class="px-2 mt-2" style="font-size: 12px;"> 
+        TESDA  Information System    <br>
+        For College Students    </h6>
+    </a></div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="/tesda_enrollee.html">
+            <i class="material-icons"> groups</i>
+            <p> Enrollees</p>
+          </a>
+        </li>           
+        <li class="nav-item ">
+          <a class="nav-link" href="/tesda_applicants.html">
+            <i class="material-icons">receipt_long</i>
+            <p>List of Applicants</p>
+          </a>
+        </li>
+        <li class="nav-item  ">
+          <a class="nav-link" href="/tesda_qualifiedapplicants.html">
+            <i class="material-icons">    how_to_reg </i>
+            <p>Qualified Scholars</p>
+          </a>
+        </li>
+        <li class="nav-item  ">
+          <a class="nav-link" href="/tesda_officialscholars.html">
+            <!-- <i class="material-icons">   stars </i> -->
+            <i class="material-icons">   star         </i>
+            <p>Official Scholars</p>
+          </a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/tesda_adminupdates.html">              
+            <i class="material-icons"> touch_app </i>
+            <!-- <i class="material-icons">   admin_panel_settings   </i> -->
+            <p>Updates</p>
+          </a>
+        </li>
+        <li class="nav-item active-pro mb-5">
+          <a class="nav-link" href="/ched_enrollee.html">
+            <i class="material-icons">shuffle</i>
+            <p>Switch CHED</p>
+          </a>
+        </li> 
+        <li class="nav-item active-pro ">
+          <a class="nav-link" id="logout">
+            <i class="material-icons">login</i>
+            <p>Logout</p>
+          </a>
+        </li> 
+      </ul>
+    </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+         
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end"> 
+            
+          </div>
+        </div>
+       
+      </nav>
+
+      
+      <div class="content">
+        <div class="container-fluid"> 
+                <div class="col-md-12">
+                  <div class="card">
+                    <script>
+                      var enrolleedlist=0;
+                    </script>
+                    <div class="card-header card-header-primary pb-0">
+                      <div class="d-flex" style="justify-content: space-between;">
+                        <h4 class="card-title ">ASCB Enrolled College Students</h4>
+                       
+                        <!-- <label>
+                          <span class="material-icons"> control_point </span> Upload enrollees
+                          <input type="file" name="" id="enrollees" style="position: absolute; z-index: -1; width: .1in; height: .1in;">
+                        
+                        </label> -->
+                      
+                        
+                      
+                      </div> 
+                      
+                      <p class="card-category"> Year
+                         <h3 class="m-0 p-0">
+                        <script>
+                          document.write(new Date().getFullYear())
+                        </script>
+                      </h3> </p>
+                      
+                    </div>
+                    <div class="card-body">
+                      <div class="d-flex">
+                        <label class="d-flex"> <span class="material-icons text-dark " style="font-size: 30px;"> group_add
+                          <!-- save_alt -->
+                          </span> <p class="mt-1 ml-2"> Upload Enrollees</p>
+                        <input type="file" id="selectFiles" value="Import" style="border: solid; border-width: thin; position: absolute; z-index: -1;" />
+                        </label> 
+                        <p id="try" style="padding: 10px 0;margin:0px;"></p>  
+                      </div>
+                     
+                      <table class="table">
+                        <thead class=" text-primary ">
+                          <th>
+                            Last Name
+                          </th>
+                          <th>
+                            First Name 
+                          </th>
+                          <th>
+                            Email
+                          </th>
+                          <th>
+                            Password
+                          </th>
+                          <th style="width:100px; text-align: center;">
+                            Register
+                          </th>
+                        </thead>
+                        <tbody id="enrolledform">
+                         
+                        </tbody>
+                      </table>
+                   
+                    </div>
+                  </div>
+                </div>  
+                
+               
+        </div>   
+        
+      
+
+      </div>
+
+    
+    
+     
+      <!-- <footer class="footer">
+        <div class="container-fluid">
+          <nav class="float-left">
+            <ul>
+              <li>
+                <a href="https://www.creative-tim.com">
+                  Creative Tim
+                </a>
+              </li>
+              <li>
+                <a href="https://creative-tim.com/presentation">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="http://blog.creative-tim.com">
+                  Blog
+                </a>
+              </li>
+              <li>
+                <a href="https://www.creative-tim.com/license">
+                  Licenses
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script>, made with <i class="material-icons">favorite</i> by
+            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+          </div>
+        </div>
+      </footer> -->
+    </div>
+    
+  </div> 
+</div>
+
+
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+   
+   
+     <!-- <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+     
+   
+      
+      <!-- database refer -->
+   <script src="/js/auth.js"></script>  
+
+
+
+   <script>
+     firebase.auth().onAuthStateChanged(function(user){
+   
+       if(!user){
+        window.location.href = "/";
+       }
+     });
+
+ 
+   </script>  
+ 
+<!-- applicants ui -->
+ <script>
+   var enrolledList = firebase.database().ref().child("Admin/Enrollees").orderByChild("enrolleedlist");
+
+   enrolledList.on("value", function(enrolledform){
+if(enrolledform.exists){
+  var enrolledformHtml ="";
+  
+  enrolledform.forEach(function(singleStudent){
+    enrolleedlist = enrolleedlist + 1;
+
+    enrolledformHtml += "<tr>"; 
+      enrolledformHtml += "<td>" +singleStudent.val().LastName + "</td>"; 
+      enrolledformHtml += "<td>" +singleStudent.val().FirstName + "</td>"; 
+      enrolledformHtml += "<td>" +singleStudent.val().Email + "</td>"; 
+      enrolledformHtml += "<td>" +singleStudent.val().FirstName + "123</td>"; 
+      enrolledformHtml += "<td><button class='p-1 m-1 form-control btn btn-danger ' style='font-size:13px; width:100px;  text-transform: none;'  onclick=registerstudent('"+singleStudent.key+"')> <span class='material-icons'>add_circle_outline</span>  register  </button>  <td>";
+   
+      enrolledformHtml += "</tr>"; 
+      
+
+  
+  });
+  $("#enrolledform").html(enrolledformHtml); 
+
+  
+}
+});
+
+function registerstudent(key){
+    var registeredstudent = firebase.database().ref("Admin/Enrollees").child(key); 
+
+
+registeredstudent.on("value", function(snapshot) {
+  var email = snapshot.val().Email
+  var name = snapshot.val().LastName 
+
+  var password = snapshot.val().FirstName + "123"
+            if(email != "" & password != "" ) { 
+          var result = firebase.auth().createUserWithEmailAndPassword(email, password);
+          result.catch(function(error)
+          {
+              var errorCode = error.code;
+              var errorMessage = error.message;
+
+              console.log(errorCode);
+              console.log(errorMessage);
+              
+              window.alert("Message: " + errorMessage);
+          });
+          // window.alert(email + " is registered")
+          document.getElementById('try').innerHTML = "<dialog id='" + name +"'> <button id='exit' class='close float-right' >&times;</button> <br> <i style='font-weight: bold; font-style: underlined;'>" + email + "</i> was successfully registered! </ dialog>";
+            $("#exit").click(function(){ 
+              $("dialog#"+name+"").fadeOut();   
+            });
+          return registeredstudent.remove()
+      }
+      else{
+          window.alert("Please fill out all fields.")
+
+      }
+  }, function (errorObject) {
+      console.log("The read failed: " + errorObject.code);
+  });
+  }
+
+ 
+</script>
+ 
+<!-- import -->
+<script>
+    var selectFiles = document.getElementById('selectFiles');
+    selectFiles.addEventListener("change",function(e){
+      var files= e.target.files; 
+    console.log(files);
+
+    if (files.length <= 0) {
+    return false;
+  }
+    var fr = new FileReader();
+
+  fr.onload = function(e) { 
+  console.log(e);
+    var result = JSON.parse(e.target.result);
+    var enrolledRef = firebase.database().ref().child("Admin/Enrollees");
+    enrolledRef.set(result);
+  
+  }
+
+  fr.readAsText(files.item(0));
+
+    });
+
+
+
+
+//   document.getElementById('import').onclick = function() {
+//     var files = document.getElementById('selectFiles').files;
+//       console.log(files);
+      
+//   if (files.length <= 0) {
+//     return false;
+//   }
+
+//   var fr = new FileReader();
+
+//   fr.onload = function(e) { 
+//   console.log(e);
+//     var result = JSON.parse(e.target.result);
+//     var enrolledRef = firebase.database().ref().child("Admin/Enrollees");
+//     enrolledRef.set(result);
+//     // var formatted = JSON.stringify(result, null, 2);
+//     //     document.getElementById('result').value = formatted;
+
+//   }
+
+//   fr.readAsText(files.item(0));
+
+// };
+
+
+</script>
+</div>
+</body>
+</html>

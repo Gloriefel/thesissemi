@@ -1,0 +1,936 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    ASCB CHED-TESDA Scholarship Information System
+    
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' /> 
+       <!-- materialize icons, css & js -->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link type="text/css" href="/css/fillup.css" rel="stylesheet">
+      
+       <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+       <script type="text/javascript" src="/js/materialize.min.js"></script>
+       <link type="text/javascript" src="/js/materialize.min.js"></script>
+   
+       <link rel="manifest" href="/manifest.json">
+     
+       <link rel="apple-touch-icon" href="/icons/icon-96x96.png">
+       <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+       <meta name = "theme-color" content="#FFE1C4">
+     
+     
+       <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+       <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+       <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+        
+   
+      <!--     Fonts and icons     -->
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+      <!-- CSS Files -->
+      <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+      <!-- CSS Just for demo purpose, don't include it in your project -->
+      <link href="../assets/demo/demo.css" rel="stylesheet" />
+
+      
+
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-39365077-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="main-panel">
+      <!-- Navbar -->
+      
+      <!-- End Navbar -->
+      <div class="content m-0">
+        <div class="container-fluid">
+          <div class="">
+            <div class="">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title"> CHED |  Commission on Higher Education Scholarship Application</h4>
+                  <p class="card-category">Please. Complete your information below.</p>
+                </div> 
+                <div class="card-body">  
+                  
+            
+                  <form id="chedform" class="mt-2" >  
+
+                        <div class="mt-3" style=" border: solid; border-width: thin;">
+                          <div id="fillform" >
+                            <ul style="display: grid; grid-template-columns: 1fr 1fr 1fr;">
+                                <li>  
+                                    <h6 class="headerfont"> <i> CHED-Scholarship Application Form 
+                                    <br> 2019 version <b class="capslock"> (Not for Sale)  </b> </i> </h6>
+                                    <img src="/img/ched.png" width="80px" height="80px" alt="" class="ml-5">
+                                </li>
+              
+                                <li class="  mt-5 form-group">
+                                    <p class="guidetwo text-center"> Office of the President of the Philippines 
+                                        <br class=" text-center" style="text-transform: uppercase;"> Commission on Higher Education
+                                        <br  class=" text-center" style="text-transform: uppercase;"> Regional Office <input type="text" id="regionoffice" style="height:1.2em; width: 32px;     background-color: rgb(240, 237, 233);" required>       
+                                    </p>  
+                        
+                                        <br>
+                                        <h6 class="capslock p-0 text-center" style="font-size: 16px;"> <b> Ched Scholarship Program (CSP) </b></h6>
+                                        <h6 class="capslock text-center" style="font-size: 14px;"> Application Form</h6>
+                                            
+                                </li>
+              
+                                <li>
+                                    <div style="display: grid; grid-template-columns: 1fr; float:right;">
+                                      <h6 class="right text-center" style="font-size: 12px;">Annex "A" <br>
+                                        <i style="font-size: 11px;">  Upload your 2x2 ID PICTURE</i> 
+                                      </h6> 
+                                    
+                                      <label class="text-center"> here <br>
+                                       <input type="file" name="file[]" accept="image/*"  id="chedidpicture" style="border: solid; border-width: thin; position: absolute; z-index: -1;">
+                                        <!-- <input type="file" id="chedidpicture" style="border: solid; border-width: thin; width: 2in; height: 2in; position: absolute; z-index: -1;"> -->
+                                          <img src="/img/id.jpg" alt="" style="width: 1.9in; height: 1.9in;" id="chedpreview">
+                                      </label> 
+                                        
+                                    </div>  
+                                </li>
+                            </ul> 
+                          <i class="headerfont" style="font-size: 14x; font-weight: bolder;">Instructions: Read General and Documentary Requirements. Fill in all the required information. Do not leave an item blank. If item is not applicable, indicate "N/A".</i>
+                          
+                          </div>
+                        
+                        </div> 
+                       
+                        <div style="background-color: rgb(207, 206, 206); border: solid; border-width: thin; ">
+                          <h6 class="text-uppercase text-center h6 mt-1 " id="personalinfor"> <b> Personal Information </b></h6>
+                        </div>
+          
+                        <div> 
+                          <!-- info part1 -->   
+                          <div id="chedpersonalinfo" style="border: solid; border-width: thin;">    
+                            <ul>
+                                <li style="border-right: solid; border-width: thin;"> 
+                                  <p class="  mt-4 guide"> 1. Name</p> </li>
+                                    
+                                <li  style="border-right: solid;  border-width: thin">
+                                  
+                                        <input type="text" id="lastname" class="validate">
+                                      
+                                    
+                                        <p class="guide p-0 text-center"><i>(Last Name)
+                                        <br> put extension, if any: i.e. Jr., III
+                                        </i></p>
+                                    
+                                </li>
+                    
+                                <li  style="border-right: solid;  border-width: thin"  >
+                                    <div>
+                                        <input class="form-control" class="validate" type="text" name="" id="firstname">
+                                    </div>
+                                    <p class="guide mt-2 text-center"><i>(First Name) </i></p>
+                                </li>
+                    
+                                <li class="text-center" style="border-right: solid; border-width: thin">
+                                    <div>
+                                        <input class="form-control" class="validate" type="text" name="" id="middlename">
+                                    </div>
+                                        <p class="guide mt-2 text-center"><i>(Middle Name) </i></p>
+                                </li>
+                    
+                                <li class="text-center">
+                                    <div>
+                                        <input class="form-control" class="validate" type="text" name="" id="maidenname">
+                                    </div>
+                                    <p class="guide"><i>Maiden Name 
+                                    <br> (for Married Women)
+                                    </i></p>
+                                </li> 
+                            </ul>    
+                          </div> 
+                          <!-- info part2 -->
+                          <div  id="firstthree" style="border: solid; border-width: thin;">
+                                
+                            <ul class="guidetwo"> 
+                                <!-- 1    -->
+                                <li> 2. Date of Birth </li>
+                                <li class="border"><input type="text" id="bday" placeholder="(mm/dd/yy)" style="color:red"></li>
+                
+                                <!-- 2 -->
+                                <li> 9. Present Address</li>
+                                <li  class="border"><input type="text" id="paddress"  minlength="4" maxlength="49" placeholder="number,street district barangay" ></li>
+              
+                                <!-- 1 -->
+                                <li>  3. Place of Birth   </li>
+                                <li class="border"><input type="text" id="placebirth" placeholder="mm/dd/yyyy"></li>
+              
+                                <!-- 2 -->
+                                <li> </li>
+                                <li  class="border"><input type="text" id="paddresscont"  minlength="4" maxlength="49" placeholder="city/municipality"></li>
+
+              
+                                <!-- 1 -->
+                                <li>  4. Sex </li>
+                                <li class="p-0">
+                                  <select name="gender" id="gender" class="form-control p-0" style="height:2.3em;">
+                                    <option value="" selected disabled> select:</option>
+                                    <option value="Female"> Female </option>
+                                    <option value="Male"> Male </option>
+                                  </select>
+                                </li> 
+                                <!-- 2 -->
+                                <li class="">10. Zip Code</li>
+                                <li class="border"><input type="number" id="presentzipcode" minlength="4" maxlength="4"></li>
+              
+                            </ul> 
+                          </div> 
+                         
+                          <!-- info part3 -->
+                          <div  id="firstthree" style="border: solid; border-width: thin;">
+                                
+                            <ul class="guidetwo"> 
+                                <!-- 1    -->
+                                <li>  </li>
+                                <li>  </li>
+                
+                                <!-- 2 -->
+                                <li  > 9. Permanent Address</li>
+                                <li  class="border"><input type="text" id="permanentadd"  minlength="4" maxlength="49" placeholder="number,street district barangay" ></li>
+              
+                                <!-- 1 -->
+                                <li> 5. Civil Status  </li>
+                                <li class=" " id="status">  
+                                  <select name="status" id="applicantstatus" class="form-control" style="height: 2.3em;"> 
+                                    <option selected disabled> Status</option>
+                                    <option value="Single">Single</option>
+                                    <option value="Married">Married</option>
+                                    <option value="Annualled">Annualled</option>
+                                    <option value="Widowed"> Widowed</option>
+                                    <option value="Separated"> Separated</option>
+                                  </select>
+                                </li>
+                                <!-- 2 -->
+                                <li> </li>
+                                <li  class="border"><input type="text" id="permanentaddcont"  minlength="4" maxlength="49" placeholder="city/municipality"></li>
+ 
+                                <!-- 1 -->
+                                <li></li>
+                                <li></li>
+                                
+                                <!-- 2 -->
+                                <li>10. Zip Code</li>
+                                <li class="border"><input type="number" id="permanentzipcode" minlength="4" maxlength="4"></li>
+              
+                            </ul> 
+                          </div> 
+                         
+                          <!-- info part4 -->
+                          <div  id="firstthree" style="border: solid; border-width: thin;">          
+                            <ul class="guidetwo"> 
+                                <!-- 1    -->
+                                <li > 6. Citizenship</li>
+                                <li class="border"><input type="text" id="citizenship"></li>
+            
+            
+                                <!-- 2 -->
+            
+                                <li> 11. Name of School last Attended</li>
+                                <li class="border"><input type="text" id="schoollast"></li>
+            
+                                <!-- 1 -->
+                                <li> 7. Mobile Number</li>
+                                <li class="border d-flex"><div style="font-size: 14px; margin-top: 5px; padding: 0 10px;">+63</div><input type="tel" id="mnumber" pattern="[0-9]{10}" minlength="10" maxlength="10" placeholder="9392819209" required></li>
+            
+                                <!-- 2 -->
+                                <li> 12. School Address</li>
+                                <li class="border"><input type="text" id="schoolad"></li>
+            
+                                <!-- 1 -->
+                                <li>  8. E-mail Address   </li>
+                                <li class="border"><input type="email" id="eadd"></li>
+            
+                                <!-- 2 -->
+                                <li>   </li>
+                                <li> </li>
+            
+                                <!-- 1 --> 
+                                <li>  13. School Sector   </li>
+                                <li id="sector" > 
+                                  <select name="" id="schoolsector" class="form-control" style="height: 2.3em;">
+                                    <option disabled selected>Selection:</option>
+                                    <option value="Public" id="public">Public</option>
+                                    <option value="Private" id="private">Private</option>
+                                  </select>
+                                  
+                                </li>
+            
+                                <!-- 2 -->
+                                <li>  15. Type of disability (if applicable)   </li>
+                                <li class="border"><input type="text" id="disabilty" ></li>
+            
+            
+            
+                                
+            
+                            </ul> 
+                          </div> 
+                          <!-- info 5 -->
+                          <div id="fistfour" style="border: solid; border-width: thin;" >
+                                      
+                                <ul class="guidetwo"> 
+                                <!-- 1    -->
+                                <li class="border" style="font-size: 8px;"> 14. Highest Attained Grade/Year Level</li>
+                                <li class="border"><input type="text" id="attained"></li>
+            
+            
+                                <!-- 2 -->
+            
+                                <li class="border"> 16. IP affiliation</li>
+                                <li class="border"><input type="text" id="affiliation"></li>
+            
+                            
+                                </ul> 
+                          </div> 
+                        </div>  
+                      
+                          <!-- familybackground -->
+                          <div style="background-color: rgb(207, 206, 206); border: solid; border-width: thin; ">
+                            <h6 class="text-uppercase text-center h6 mt-1 " id="personalinfor"> <b> Family Background </b></h6>
+                          </div>
+
+                          <!-- part1 -->
+                          <div  id="familyback" style="border: solid; border-width: thin;">     
+                            <ul class="guidetwo"> 
+                                <!-- 1    -->
+                                <li> </li>
+                                <li class="d-flex">  
+                                    <p class="mt-2"> Father: </p> 
+                                    <select name="fatherstatus" id="fatherstatus" class="ml-3 form-control">
+                                      <option value="" disabled selected> Select: </option>
+                                      <option value="Living" id="fliving"> Living </option>
+                                      <option value="Deceased" id="fdeceased"> Deceased </option>
+                                    </select> 
+                                </li>
+                                
+                                <li class="d-flex">   
+                                    <p class="mt-2"> Mother:</p>
+                                     
+                                      <select name="motherstatus" id="motherstatus" class=" ml-3 form-control">
+                                        <option value="" disabled selected> Select: </option>
+                                        <option value="Living" id="mliving"> Living </option>
+                                        <option value="Deceased" id="mdeceased"> Deceased </option>
+                                      </select> 
+                                </li>
+                                
+                                <li class="text-center mt-2">Legal Guardian:  </li>
+            
+                                <!-- 2 -->
+            
+                                <li> 17. Name</li>
+                                <li class="border"><input type="text" id="fathername"></li>
+                                <li class="border"><input type="text" id="mothername"></li>
+                                <li class="border"><input type="text" id="guardianname"></li>
+            
+                                <!-- 2 -->
+                                <li> 18. Address</li>
+                                <li class="border"><input type="text" id="fatheraddress"></li>
+                                <li class="border"><input type="text" id="motheraddress"></li>
+                                <li class="border"><input type="text" id="guardianaddress"></li>
+            
+                                <!-- 2 -->
+                                <li> 19. Contact Number  </li>
+                                <li class="border"><input type="tel" id="fathercNumber" name="phonenumber" pattern="[0-9]{11}" minlength="11" maxlength="11" placeholder="09392819209" required></li>
+                                <li class="border"><input type="tel" id="mothercNumber" name="phonenumber" pattern="[0-9]{11}" minlength="11" maxlength="11" placeholder="09392819209" required></li>
+                                <li class="border"><input type="tel" id="guardiancNumber" name="phonenumber" pattern="[0-9]{11}" minlength="11" maxlength="11" placeholder="09392819209" required></li>           
+            
+                                <!-- 2 -->
+                                <li>  20. Occupation  </li>
+                                <li class="border"><input type="text" id="fatherOccupation"></li>
+                                <li class="border"><input type="text" id="motherOccupation"></li>
+                                <li class="border"><input type="text" id="guardianOccupation"></li>
+            
+                                <!-- 2 -->
+                                <li>  21. Name of Employer </li>
+                                <li class="border"><input type="text" id="fatherEmployer"></li>
+                                <li class="border"><input type="text" id="motherEmployer"></li>
+                                <li class="border"><input type="text" id="guardianEmployer"></li>
+            
+                                <!-- 2 -->
+                                <li>  22. Employer Address </li>
+                                <li class="border"><input type="text" id="fatherEmployeradd"></li>
+                                <li class="border"><input type="text" id="motherEmployeradd"></li>
+                                <li class="border"><input type="text" id="guardianEmployeradd"></li>
+            
+                                <!-- 2 -->
+                                <li>  23. Highest Educational Attainment  </li>
+                                <li class="border"><input type="text" id="fatherAttainment"></li>
+                                <li class="border"><input type="text" id="motherAttainment"></li>
+                                <li class="border"><input type="text" id="guardianAttainment"></li>
+            
+                                <!-- 2 -->
+                                <li> 24. Total Parents Taxable Income </li>
+                                <li class="border"><input type="text" id="fathertax" placeholder="Php 000 / N/A"></li>
+                                <li class="border"><input type="text" id="mothertax" placeholder="Php 000 / N/A"></li>
+                                <li class=" mt-1">24. No. of Siblings in the family 18 years old and below <input type="number" style="
+                                    width: 10%;
+                                    font-size: 9; 
+                                    font-weight: bold;
+                                    text-align: center;" id="nosiblings" ></li>
+                            </ul> 
+                          </div> 
+
+                          <!-- part2 -->
+                          <div style=" border: solid; border-width: thin; display: grid; grid-template-columns: 1fr .9fr;">
+                            <p class="guidetwo mt-2">25. Is your family a beneficiary of the DSWD's pantawid Pamilyang Pilipino Program (4Ps)? </p>
+                              <select name="yesno" id="yesnobenificiary" class="form-control ml-1">
+                                <option value="" selected disabled> Select:</option>
+                                <option value="Yes" id="yes"> Yes</option>
+                                <option value="No" id="no"> No</option>
+                              </select>  
+                             
+                            
+                          </div>
+                
+          
+          
+                    <!-- school attend --> 
+                          <!-- school -->
+                          <div  style=" border: solid; border-width: thin;"   >
+                            <div id="school">
+                                <ul class="guidetwo">
+                                
+                                <li> 26. School Intended to enroll/enrolled in: </li>
+                                <li>
+                                    <input type="text" id="schoolintended" style="    background-color: rgb(240, 237, 233);
+                                    ">
+                                </li>
+                  
+                                <li>
+                                    27. School Address:
+                                </li>
+                                <li>
+                                    <input type="text" id="schoolintendedadd" style="    background-color: rgb(240, 237, 233);
+                                    ">
+                                </li>
+                                
+                                <li>
+                                    28. Type of School: 
+                                </li> 
+                                <li> 
+                                  <select name="" id="typeintendsector" class="form-control">
+                                    <option disabled selected>Selection:</option>
+                                    <option value="Public" id="typepublic">Public</option>
+                                    <option value="Private" id="typeprivate">Private</option>
+                                  </select> 
+                                </li> 
+                  
+                                <li >
+                                    29. Degree Program:
+                                </li>
+                                <li>
+                                  <select name="degree" id="degreeprog" class="form-control">
+                                    <option selected disabled> Bachelor of Science in: </option>
+                                    <option value="Bachelor of Science in Information Technology">Bachelor of Science in Information Technology</option>
+                                    <option value="Bachelor of Science in Computer Science">Bachelor of Science in Computer Science</option>
+                                    <option value="Bachelor of Science in Education Major in English">Bachelor of Science in Education Major in English</option>
+                                    <option value="Bachelor of Science in Education Major in Mathematics">Bachelor of Science inEducation Major in Mathematics</option>
+                                    <option value="Bachelor of Science in Criminology">Bachelor of Science in Criminology</option>
+                                    <option value="Bachelor of Science in Accountancy">Bachelor of Science in Accountancy</option>
+                                    <option value="Bachelor of Science in Business Administration">Bachelor of Science in Business Administration</option>
+                                  </select> 
+                                </li>    
+                                
+                                </ul>
+                            </div> 
+                            
+                            <!-- assistance -->
+                            <div id="assistance" >
+ 
+                                    <li style="font-size: 10px; display: grid; grid-template-columns: 1.1fr .3fr .6fr 1fr;"> 
+                                      
+                                      <p class="guidetwo  mt-4">  30. Are you enjoying other sources of educational/financial assistance  </p>
+                                      <select name="yesno" id="financialassyesno" class="form-control mt-3" style="width: 50px;">
+                                        <option value="" selected disabled> Select:</option>
+                                        <option value="Yes" id="enjoyiingyes"> Yes</option>
+                                        <option value="No" id="enjoyiingyes"> No</option>
+                                      </select>  
+                                    
+                                            <p class="guidetwo mt-4" >  If Yes, please specify</p>
+                                        <ul>  
+                                            <p class="guidetwo text-center  mt-2">Type</p>
+                                            <p class="guidetwo nametitle  mt-2">Grantee Instituion/Agency</p>
+                                            
+                                            <ol>  
+                                            <li><input type="text" id="type1" style="    background-color: rgb(240, 237, 233);   "> </li> 
+                                              <input type="text" id="type2" style="    background-color: rgb(240, 237, 233);      ">  </li> 
+                                            </ol> 
+                    
+                                            <li class="ml-1">
+                                              <input type="text" style="width: 90%;" id="inst1" style="    background-color: rgb(240, 237, 233);   ;"> 
+                                            <input type="text" style="width: 90%;"  id="inst2" style="    background-color: rgb(240, 237, 233);  ">  
+                                          </li>    
+                                        </ul>
+                                    </li> 
+                            </div>
+                          </div>
+            
+                          <!-- part4 -->
+                            <!-- hereby -->
+                          <div id="signature" style=" border: solid; border-width: thin; ">
+                            <p class=" px-1 guidetwo">
+                            I hereby certify that foregoing statements are true and correct. Any misinformation or witholding of information will automatically disqualify me from the CHED Scholarship Program. I am willing to
+                            refund the financial benefits received if such information is discovered after acceptance of the award.
+                            <br>
+                            <br>
+                            I hereby express my consent for the Commission on Higher Education to collect, record, organize, update or modify, retrieve, consult, use, consolidate, block, erase or destruct my personal data as
+                            part of my information. I hereby affirm my right to be informed, object to processing, access and rectify, suspend or withdraw my personal data and be indemnified in case of damages pursuant to the
+                            provisions of the Republic Act No. 10173 of the Philippines, Data Privacy Act of 2012 and its corresponding Implementing Rules and Regulations.
+                            </p>
+            
+                            <ul>
+                            <li style=" margin: 0 auto;">
+                              
+                                <input type="text" name="" id="chedsignatre" style="width: 100%;" class="mb-0">
+                                <p class="guidetwo  text-center"><i>(Over Printed Name of Applicant)</i></p>
+            
+                            </li>
+            
+                            <li style=" margin: 0 auto;">                
+                                <input type="text" name="" id="dateaccomplished" style="width: 100%; background-color: rgb(240, 237, 233); " class="mb-0">
+                                <p class="guidetwo text-center "><i>Date Accomplished</i></p>
+            
+                            </li>
+                            </ul>
+                            <p class="guidetwo text-center mt-1"> <b> <i> Note: Fully accomplished form to be submitted to the CHEDRO</i></b></p>
+                        </div> 
+                        
+                        <div>  
+                            <!-- <br>
+                              <p class="guide p-0 m-0"> Are you enrolled already at Andress Soriano Colleges of Bislig?
+                              <select name="" id="enrolmentstatus" class="form-control" >
+                                <option selected disabled></option>
+                                <option value="enrolled"> Yes </option>
+                                <option value="not enrolled"> No </option>
+                              </select> 
+                            </p> -->
+
+                            <p class="guide p-0 mt-2  ">What is your year level this school year?
+                            <select name="" id="yearlevel" class="form-control" >
+                              <option selected disabled></option>
+                              <option value="1st Year"> 1st  Year </option>
+                              <option value="2nd Year"> 2nd Year</option>
+                              <option value="3rd Year"> 3rd Year</option>
+                              <option value="4th Year"> 4th Year</option>
+                            </select>  
+                            </p>
+                         
+                        </div>
+                        <h6 class="p-0 mt-1 col-sm-12" id="posts" style="height: 2em;"></h6>
+                        <div class="progress bg-dark p-0 " style="height: .5rem;">
+                          <div class="progress-bar bg-success p-0 m-0" id="upload-progress" style="width: 0%; font-size: 9px;">
+                            0%
+                          </div>
+                        </div>
+                        <button type="button" class="btn btn-primary pull-right mt-3" id="chedapply">Submit</button>
+                        <div class="clearfix"></div>
+                  </form>  
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="javascript:;">
+                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="text-left font-weight-bold">Notifications</h4>
+                  <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                  <h4 class="card-title">Alec Thompson</h4>
+                  <p class="card-description">
+                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  </p>
+                  <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div> 
+      </div>
+      <div id="feedposts" class="px-2 m-0" style="display: grid; grid-template-columns: 1fr;  text-align: justify; " >
+
+      </div>
+      
+      <footer class="footer">
+        <div class="container-fluid">
+          
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Applicants, Good Luck! :)
+            
+          </div>
+        </div>
+      </footer>
+       
+
+    </div> 
+ 
+
+  
+
+
+
+  
+
+
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+   
+   
+     <!-- <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+      
+    <script src="/js/auth.js"></script>  
+ 
+
+    
+
+ 
+
+    <!-- ched id with fill form -->
+   <script>
+        function previewImage(postid){  
+      if(postid.files && postid.files[0]){
+        var reader = new FileReader(); 
+        reader.onload = function(e){ 
+          $("#chedpreview").attr('src', e.target.result);
+          $("#chedpreview").fadeIn();  
+        }
+        reader.readAsDataURL(postid.files[0]); 
+        }   
+    }
+ 
+    $("#chedidpicture").change(function(){
+          previewImage(this);
+    });   
+  
+        
+        $("#chedapply").click(function(){ 
+            var picture = $("#chedidpicture").prop("files")[0];  
+            var region  = $("#regionoffice").val(); 
+            var lastname = $("#lastname").val();
+            var firstname = $("#firstname").val();
+            var middlename = $("#middlename").val();
+            var maidenname = $("#maidenname").val();
+            var bday = $("#bday").val();
+            var paddress = $("#paddress").val();
+            var placebirth = $("#placebirth").val();
+            var paddresscont = $("#paddresscont").val(); 
+            var gender = $("#gender").val();
+            var presentzipcode = $("#presentzipcode").val(); 
+            var applicantstatus = $("#applicantstatus").val(); 
+            var permanentadd = $("#permanentadd").val(); 
+            var permanentaddcont = $("#permanentaddcont").val();  
+            var permanentzipcode = $("#permanentzipcode").val();
+            var citizenship = $("#citizenship").val();
+            var schoollast = $("#schoollast").val();
+            var mnumber = $("#mnumber").val();
+            var schoolad = $("#schoolad").val();
+            var eadd = $("#eadd").val(); 
+            var schoolsector = $("#schoolsector").val(); 
+            
+            var disabilty = $("#disabilty").val();
+            var attained = $("#attained").val();
+            var affiliation = $("#affiliation").val();
+            var fatherstatus = $("#fatherstatus").val();
+            var motherstatus = $("#motherstatus").val(); 
+            var fathername = $("#fathername").val();
+            var mothername = $("#mothername").val();
+            var guardianname = $("#guardianname").val();
+            var fatheraddress = $("#fatheraddress").val();
+            var motheraddress = $("#motheraddress").val();
+            var guardianaddress = $("#guardianaddress").val();
+            var fathercNumber = $("#fathercNumber").val();
+            var mothercNumber = $("#mothercNumber").val();
+            var guardiancNumber = $("#guardiancNumber").val();
+            var fatherOccupation = $("#fatherOccupation").val();
+            var motherOccupation = $("#motherOccupation").val();
+            var guardianOccupation = $("#guardianOccupation").val();
+            var fatherEmployer = $("#fatherEmployer").val();
+
+            var motherEmployer = $("#motherEmployer").val();
+            var guardianEmployer = $("#guardianEmployer").val();
+            var fatherEmployeradd = $("#fatherEmployeradd").val();
+            var motherEmployeradd = $("#motherEmployeradd").val();
+            var guardianEmployeradd = $("#guardianEmployeradd").val();
+
+            var fatherAttainment = $("#fatherAttainment").val();
+            var motherAttainment = $("#motherAttainment").val();
+            var guardianAttainment = $("#guardianAttainment").val();
+            var fathertax = $("#fathertax").val();
+            var mothertax = $("#mothertax").val(); 
+            var nosiblings = $("#nosiblings").val();
+
+
+            var yesnobenificiary = $("#yesnobenificiary").val();
+            var schoolintended = $("#schoolintended").val();
+            var schoolintendedadd = $("#schoolintendedadd").val();
+            var typeintendsector = $("#typeintendsector").val();
+
+            var degreeprog = $("#degreeprog").val(); 
+
+            var financialassyesno = $("#financialassyesno").val();  
+            var type1 = $("#type1").val();
+            var type2 = $("#type2").val(); 
+            var inst1 = $("#inst1").val();
+            var inst2 = $("#inst2").val();
+            var yearlevel = $("#yearlevel").val();
+            
+            var chedsignatre = $("#chedsignatre").val(); 
+            var dateaccomplished = $("#dateaccomplished").val();
+            var status = "to be reviewed";
+          
+  
+            var rootRef = firebase.database().ref().child("Ched/Ched_applicants");
+            var userID = firebase.auth().currentUser.uid;
+            var usersRef = rootRef.child(userID);
+
+            //
+            rootRef.once("value").then(function(snapshot){
+
+            var name = picture["name"]; 
+            var dateStr = new Date().getTime();
+            var fileCompleteName = name + "_" + dateStr; 
+
+            var storageRef = firebase.storage().ref("Ched_applicants ID");
+            var postStorageRef = storageRef.child(fileCompleteName); 
+
+            var uploadTask = postStorageRef.put(picture); 
+
+            uploadTask.on("state_changed", 
+
+              function progress(snapshot){
+                var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                
+                $("#upload-progress").html(Math.round(percentage)+ "%");
+                $("#upload-progress").attr("style", "width:" + percentage + "%");
+                  
+                },
+                function error(err){
+
+                },
+                function complete(){
+                  var user = firebase.auth().currentUser;
+                  var username;
+                  firebase.database().ref('Ched/Ched_applicants/' + user.uid).once('value').then(function(snapshot){
+                    var firstname = (snapshot.val() && snapshot.val().firstname);
+                    var lastname = (snapshot.val() && snapshot.val().lastname);
+
+                          username = firstname + " " + lastname;
+                  });
+                  
+                  uploadTask.snapshot.ref.getDownloadURL().then(function(downdloadURL){
+
+                    var time = new Date();
+
+                    var options = {
+                        weekday: "long",
+                        month: "long",
+                        day: "2-digit",
+                        year: "numeric",
+                      }; 
+
+                      if(region!="" && lastname!="" && firstname!="" && middlename!="" && maidenname!="" ){
+
+                      var cheduserData = {
+                        "image": downdloadURL, 
+                        "name": fileCompleteName,  
+                        "uid":user.uid, 
+                        "username":username,
+                        "time": time.toLocaleDateString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                        "date": time.toLocaleDateString('en-US', options),
+                        "region": region, 
+                        "lastname": lastname,
+                        "firstname": firstname,
+                        "middlename": middlename,
+                        "maidenname": maidenname,  
+                          "bday": bday,
+                          "paddress": paddress,
+                          "placebirth": placebirth,
+                          "gender": gender, 
+                          "paddresscont": paddresscont,
+                          "presentzipcode": presentzipcode,
+                          "permanentadd": permanentadd,  
+                          "permanentaddcont": permanentaddcont, 
+                          "applicantstatus": applicantstatus, 
+                          "permanentzipcode": permanentzipcode,
+                          "citizenship": citizenship,
+                          "schoollast": schoollast,
+                          "mnumber": mnumber,
+                          "schoolad": schoolad,
+                          "eadd": eadd, 
+                          "disabilty": disabilty,
+                          "schoolsector": schoolsector, 
+                          "attained": attained,
+                          "affiliation": affiliation,
+                          "fatherstatus": fatherstatus,
+                          "motherstatus": motherstatus, 
+                          "fathername": fathername,
+                          "mothername": mothername,
+                          "guardianname": guardianname,
+                          "fatheraddress": fatheraddress,
+                          "motheraddress": motheraddress,
+                          "guardianaddress": guardianaddress,
+                          "fathercNumber": fathercNumber,
+                          "mothercNumber": mothercNumber,
+                          "guardiancNumber": guardiancNumber,
+                          "fatherOccupation": fatherOccupation,
+                          "motherOccupation": motherOccupation, 
+                          "guardianOccupation": guardianOccupation,
+                          "fatherEmployer": fatherEmployer,
+                          "motherEmployer": motherEmployer,
+                          "guardianEmployer": guardianEmployer, 
+                          "fatherEmployeradd": fatherEmployeradd,
+                          "motherEmployeradd": motherEmployeradd,
+                          "guardianEmployeradd": guardianEmployeradd,
+                          "fatherAttainment": fatherAttainment,
+                          "motherAttainment": motherAttainment,
+                          "guardianAttainment": guardianAttainment,
+                          "fathertax": fathertax, 
+                          "mothertax": mothertax,
+                          "nosiblings": nosiblings,
+                          "yesnobenificiary": yesnobenificiary,
+
+                          "schoolintended": schoolintended,
+                          "schoolintendedadd": schoolintendedadd,
+                          "typeintendsector": typeintendsector,
+                          "degreeprog": degreeprog, 
+                          "financialassyesno": financialassyesno,  
+                          "type1": type1,
+                          "type2": type2,
+                          "inst1": inst1,
+                          "inst2": inst2,
+ 
+                          "chedsignatre": chedsignatre, 
+                          "dateaccomplished": dateaccomplished,
+
+                          "yearlevel": yearlevel,  
+                          "status" : status,
+
+                      };
+              
+                      usersRef.set(cheduserData, function(error){
+                      if(error){
+                              var errorCode = error.code;
+                              var errorMessage = error.message;
+
+                              console.log(errorCode);
+                              console.log(errorMessage);
+                              
+                              window.alert("Message: " + errorMessage);
+                          }
+                            else{
+                              $("#posts").attr("class", "alert alert-success");
+                              $("#posts").html("upload success.");
+                              // $("#posts").html("<dialog><div id='signature-pad' class='signature-pad'> <div class='signature-pad--body'>  <canvas></canvas>  </div>  <div class='signature-pad--footer'>  <div class='description'>Sign above</div>    <div class='signature-pad--actions'> <div>  <button type='button' class='button clear' data-action='clear'>Clear</button>  </div>  <div>          <button type='button' class='button save' data-action='save-png'>Save as PNG</button>  </div> <label class='p-0 mx-auto'>  upload your signature <span class='material-icons'>   attach_file  </span><input name='signature' type='file'  id='fileButton' accept='image/*' style=' position: absolute; z-index: -1; width: .1in; height: .1in;'>    </label> </div></div> </div></dialog>");
+      
+                                // edit to homepage
+                                window.location.href = "/chedapplication_signature.html"; 
+                            }
+                        });
+              
+                      }
+                      else{
+                          window.alert("Please fill out all fields.") 
+                      }
+              
+                        });
+                      });
+                    }
+                  ); 
+                });  
+            
+   </script>
+ 
+
+</body>
+
+</html>

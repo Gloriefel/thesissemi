@@ -1,0 +1,1014 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    ASCB CHED-TESDA Scholarship Information System
+    
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' /> 
+       <!-- materialize icons, css & js -->
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+       <link type="text/css" href="/css/fillup.css" rel="stylesheet">
+      
+       <link type="text/css" href="/css/materialize.min.css" rel="stylesheet">
+       <script type="text/javascript" src="/js/materialize.min.js"></script>
+       <link type="text/javascript" src="/js/materialize.min.js"></script> 
+       <link rel="manifest" href="/manifest.json"> 
+       <link rel="apple-touch-icon" href="/icons/icon-96x96.png">
+       <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+       <meta name = "theme-color" content="#FFE1C4">
+       <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script> 
+       <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+       <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+         
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper ">
+     
+    <div class="main-panel">
+      
+      <div class="content m-0">
+        <div class="container-fluid">
+          <div class="">
+            <div class="">
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title"> Technical Education and Skills Development Authority :</h4>
+                  <h4 class=" text-center"> Special Training for Employment Program (STEP) &nbsp; &nbsp; &nbsp;  & &nbsp; &nbsp; &nbsp; Training for Work Scholarship Program (TWSP)   </h4>
+                  <p class="card-category">Please. Complete your information below.</p>
+                </div>
+                <div class="card-body">
+                 
+                  <form id="tesdaform_step" > 
+                     <!-- header -->
+                    <div id="header">
+                      <div class="text-center p-0" style="display: grid; grid-template-columns: .2fr 1fr .2fr;">
+                        <div class="p-3 bordertesda">
+                          <img src="/img/tesda.png" alt="" height="50px" width="50px">
+                        </div>
+                        <div class="p-3 bordertesda guide"> <b>  Technical Education and Skills Development Authority </b>  
+                          <br>  Pangasiwaan sa Edukasyong Teknikal at Pagpapaunlad ng Kasanayan TWSA Form
+                        </div>
+                        <div class="p-3 guide  bordertesda" > <b> <i> TWSA Form
+                          <br> 0032017 </i></b>
+                        </div>
+                      </div> 
+                    </div>
+              
+                    <!-- title -->
+                    <div>
+                      <h5 class="titleset p-2 mb-0 bordertesda" style="font-weight: bold;">TESDA Walk-in Scholarship Application Form</h5>
+                    </div>
+              
+                    <!-- profile --> 
+                    <div id="applicantprof">
+                      <div class=" bordertesda" style="display: grid; grid-template-columns: .2fr 1fr .2fr;">
+                        <div>  </div>
+                        <div class="titleset p-4 my-auto">  <h4  style="font-weight: bold;"> <b> Applicant's Profile </h4> </b> </div> 
+                          <div style="display: grid; grid-template-columns: 1fr;"> 
+                            <label class="text-center p-0 m-0 text-danger" style="font-size: 11px;"> upload your 1x1 ID   here  <br>
+                             <i style="font-size: 10px;">taken within the last 6 months </i> 
+                              <img src="/img/id.jpg" alt="" style="width: 1in; height: 1in;" id="tesdapreview"> 
+                              <input type="file" name="file[]" multiple accept="image/*"  id="tesdaidpicture" style="border: solid; border-width: thin;  width: 0.1px; height: 0.1px;  position: absolute; z-index: -1;">
+
+                              <!-- <input type="file" onchange='chooseFile(event)' id="" style="border: solid; border-width: thin; width: 0.1px; height: 0.1px; position: absolute; z-index: -1;"> -->
+                            </label>
+                          </div>
+                      </div>
+                    </div>
+      
+                    <div class="backgroundcolor" style="font-weight: bold;  ">
+                      <h6 class=" p-1 mb-0 bordertesda  normalfont"> 1. Web-Based Information System Auto Generated:
+                        <i>(To be filled-out by TESDA Personel)</i>
+                      </h6>
+                    </div> 
+                 
+                 <!-- 2 -->
+                 <div class="backgroundcolor" style="font-weight: bold;">
+                     <h6 class=" p-1 mb-0 bordertesda normalfont"> 2. Application's Personal Information
+                     </h6>
+                 </div> 
+      
+                 <!-- info -->
+                 <div id="personalinfo" style="border: solid; border-width: thin;">
+                     
+                     <ul>
+                       <li class="mt-3" style="font-weight: bold;">
+                          2.1 Name  <br> <br> <br>
+                          2.2 Complete <br> Permanent <br> Address 
+                       </li>
+                       <li class="text-center" style="font-weight: bold;">
+                         <input type="text" name="" id="last" class="mt-2">
+                          Last  
+           
+                         <input type="text" name="" id="streetnum">
+                          Number, Street  
+           
+           
+                         <input type="text" name="" id="city">
+                         City/Municipality  
+                       
+                         
+                         <input type="text" name="" id="emailadd">
+                        Email Address  
+           
+                         
+                       </li>
+                       <li class="text-center" style="font-weight: bold;">
+                         <input type="text" name="" id="first" class="mt-2">
+                          First   
+
+                         <input type="text" name="" id="barangay">
+                           Barangay  
+            
+                         <input type="text" name="" id="province">
+                          Province  
+           
+           
+                         <input type="text" name="" id="celno">
+                          Cellphone/Landline No.  
+           
+                       </li>
+                       <li class="text-center" style="font-weight: bold;">
+
+                         <input type="text" name="" id="middle" class="mt-2">
+                           Middle  
+           
+                         <input type="text" name="" id="district">
+                         District  
+           
+           
+                         <input type="text" name="" id="region">
+                           Region  
+           
+                       </li>
+                     </ul> 
+           
+                 </div>
+           
+                 <!-- status -->
+                 <div id="status" style=" border:solid; border-width: thin;">
+                     <ul class="p-0 m-0">
+                       <li class="ml-2" style="border-right: solid; border-width: thin; font-weight: bold;">  2.3. Sex     </li>
+                       
+                       <li class="ml-2" style="border-right: solid; border-width: thin; font-weight: bold;"> 2.4. Civil Status     </li>
+           
+                       <li class="ml-2" style=" font-weight: bold;">2.5. Employment Status        </li>
+           
+                       <li class="ml-3" style="border-right: solid; border-width: thin;">
+                         
+                        <select name="gender" id="gendervalue" class="form-control"  style="font-weight: bold;">
+                          <option disabled selected> Select :</option>
+                          <option value="Female"> Female</option>
+                          <option value="Male"> Male</option>
+                        </select> 
+                        
+                       </li>
+           
+                       <li class="ml-3" style="border-right: solid; border-width: thin;"> 
+                          <select name="civilstatus" id="civilstatus" class="form-control" style="font-weight: bold;">
+                            <option disabled selected> Select :</option>
+                            <option value="Single"> Single</option>
+                            <option value="Married"> Married</option>
+                            <option value="Widow/Widower"> Widow/Widower</option>
+                            <option value="Separate-in-Fact"> Separate-in-Fact</option>  
+                          </select>
+                       </li>
+           
+                       <li class="ml-3"> 
+                        <select name="employmentstatus" id="employmentstatus" class="form-control" style="font-weight: bold;">
+                          <option disabled selected> Select :</option>
+                          <option value="Employed"> Employed</option>
+                          <option value="Unemployed"> Unemployed</option> 
+                        </select> 
+                       </li>
+                     </ul>
+                 </div> 
+      
+                 <!-- birthday -->
+                 <div id="birth" style="border: solid; border-width: thin;"> 
+                   <ul class="mt-3 mr-5 ">
+                     <li style="font-weight: bold;">
+                        2.6 Birthdate  
+                     </li>
+                     <li class="text-center" style="font-weight: bold;">
+                       <input type="text" name="" id="mbirth" style="border: solid; border-width: thin;">
+                         Month of Birth 
+                     </li>
+                     <li class="text-center" style="font-weight: bold;">
+                       <input type="text" name="" id="dbirth" style="border: solid; border-width: thin;">
+                       Day of Birth  
+                     </li>
+                     <li class="text-center" style="font-weight: bold;"> 
+                      <input type="text" name="" id="ybirth" style="border: solid; border-width: thin;">
+                         Year of Birth   
+                     </li>
+                     
+                   </ul> 
+                 </div>
+           
+                 <!-- birthdplace -->
+                 <div id="birthplace" style="border: solid; border-width: thin;"> 
+                   <ul class="mt-3 mr-5">
+                     <li style="font-weight: bold;">
+                        2.6 Birthplace 
+                     </li>
+                     <li class="text-center" style="font-weight: bold;"> 
+                      <input type="text" name="" id="placecity" style="border: solid; border-width: thin;">
+                        City/Municipality  
+                     </li>
+                     <li class="text-center" style="font-weight: bold;"> 
+                       <input type="text" name="" id="placeprov" style="border: solid; border-width: thin;">
+                        Province 
+                     </li>                     
+                     <li class="text-center" style="font-weight: bold;"> 
+                       <input type="text" name="" id="placeregion" style="border: solid; border-width: thin;">
+                         Region   
+                     </li> 
+                   </ul> 
+                 </div>
+                 
+                 <!-- highest attainment -->
+                <div>
+                  <h6 class="p-1 mb-0 backgroundcolor" style="border: solid; border-width: thin;">   2.8 Highest Educational Attainment</h6>
+                  <div style="border: solid; border-width: thin;">
+                    <select name="educationattainment" id="attainment" class="form-control px-2" style="font-weight: bold;">
+                      <option value="" disabled selected> Select :</option> 
+                      <option value="Elementary Graduate">Elementary Graduate</option>
+                      <option value=" College Graduate"> College Graduate</option>
+                      <option value="Elementary Undergraduate"> Elementary Undergraduate</option>
+                      <option value="Alternative Learning System (ALS) Graduate"> Alternative Learning System (ALS) Graduate</option>
+                      <option value="Masters/Degree holder"> Masters/Degree holder</option>
+                      <option value="High School Undergraduate">High School Undergraduate </option>
+                      <option value="High School Graduate"> High School Graduate</option>
+                      <option value="ALS Students (currently enrolled)">  ALS Students (currently enrolled)</option>
+                      <option value="College Undergraduate">  College Undergraduate</option>
+                      <option value="Others">Others</option>
+                    </select>
+                  </div>
+                  
+                </div>
+          
+                <!-- 2 -->
+                <div class="backgroundcolor">
+                  <h6 class=" p-1 mb-0 bordertesda"> *For below 18 years old, please specify the name of your guardian with his/her contact no. and complete
+                    permanent mailing address. 
+                </h6>
+                </div>
+          
+                <!-- part 1 18 below -->
+                <div id="guardian" style="border: solid; border-width: thin;">    
+                  <ul class="mt-3 mr-5">
+                    <li style="font-weight: bold;">
+                     2.9 Parent/Guardian*   
+                    </li>
+                    <li class="text-center" style="font-weight: bold;">
+                      <input type="text" name="" id="parentname" style="border: solid; border-width: thin;">
+                        Name 
+                    </li>
+                    <li class="text-center" style="font-weight: bold;">
+                      <input type="text" name="" id="parentno" style="border: solid; border-width: thin;">
+                       Contact No. & Complete Permanent Mailing Address  
+                    </li> 
+                  </ul> 
+                </div>
+          
+                <div class="backgroundcolor">
+                  <h6 class=" p-1 mb-0 bordertesda"> 3. Classification of Applicant: <i>(Please select only one that is most applicable to you). </i>
+                  </h6>
+                </div>
+          
+                <!-- classification --> 
+                <div id="classification" style="border: solid; border-width: thin;">
+                  <select name="classification" id="classificationapplicant" class="form-control py-2" style="font-weight: bold;">
+                    <option value="" disabled selected> Select :</option>
+                    <option value="Student">Student</option>
+                    <option value="Informal Workers">Informal Workers</option>
+                    <option value=" Indigenous Peoples and Cultural Communities"> Indigenous Peoples and Cultural Communities</option>
+                    <option value="Out-of-School Youth"> Out-of-School Youth</option>
+                    <option value="Industry Workers"> Industry Workers</option>
+
+                    <option value="Disadvantaged Women"> Disadvantaged Women</option>
+                    <option value="Solo Parent"> Solo Parent</option>
+                    <option value="Cooperatives"> Cooperatives</option>
+                    <option value="Victim of Natural Disasters and Calamities"> Victim of Natural Disasters and Calamities</option>
+                    <option value="Solo Parent’s Children"> Solo Parent’s Childrens</option>
+                    <option value="Family Enterprises"> Family Enterprises</option>
+                    <option value="Victim or Survivor of Human Trafficking"> Victim or Survivor of Human Trafficking</option>
+                    <option value="Senior Citizens"> Senior Citizens</option>
+                    <option value="Microentrepreneurs"> Microentrepreneurs</option>
+                    <option value="Drug Dependent Surrenderers"> Drug Dependent Surrenderers</option>
+                    <option value="TVET Trainers"> TVET Trainers</option>
+                    <option value="Family Members of Microentrepreneurs"> Family Members of Microentrepreneurs</option>
+                    <option value="TVET Trainers"> TVET Trainers</option>
+                    <option value="Rebel Returnees or Decommissioned"> Rebel Returnees or Decommissioned</option>
+                    <option value=" Displaced HEIs Teaching">  Displaced HEIs Teaching</option>
+                    <option value="Farmers and Fishermen">  Farmers and Fishermen"</option>
+                    <option value="Inmates and Detainees">  Inmates and Detainees</option>
+                    <option value="Persons with Disability"> Persons with Disability</option>
+                    <option value="Family Members of Farmers and Fishermen">  Family Members of Farmers and Fishermen</option>
+
+                    <option value="Wounded-in-Action AFP & PNP Personnel"> Wounded-in-Action AFP & PNP Personnel</option>
+                    <option value="Currently Employed Workers"> Currently Employed Workers</option>
+                    <option value="Community Training & Employment Coordinator"> Community Training & Employment Coordinator</option>
+                    <option value="Family Members of AFP & PNP Wounded-in Action"> Family Members of AFP & PNP Wounded-in Action</option>
+                    <option value="Employees w/ Contractual/JobOrder Status"> Employees w/ Contractual/JobOrder Status</option>
+                    <option value="Returning/Repatriated OFWs"> Returning/Repatriated OFWs</option>
+                    <option value="Family Members of Inmates and Detainees"> Family Members of Inmates and Detainees</option>
+                    <option value="Urban and Rural Poor"> Urban and Rural Poor</option>
+                    <option value="OFWs Dependents"> OFWs Dependents</option>
+                    <option value="Victims of Human Rights or their Authorized Beneficiaries"> Victims of Human Rights or their Authorized Beneficiaries</option>
+                     
+                  </select>
+                   
+                </div>
+          
+                <div class="backgroundcolor">
+                  <h6 class=" p-1 mb-0 bordertesda"> 4.  Training Programs (TVET Qualifications) Preferred      </h6>
+                </div>
+                <div id="choice" style="border: solid; border-width: thin;">
+                  <ul>
+                    <li class="mt-2" style="font-weight: bold;" >
+                      4.1 First Choice:   <br><br> 
+                      4.2 Second Choice:  <br> <br> 
+                      4.2 Other Preference*:
+                      
+                    </li>
+                    <li class="mt-2">
+                        
+                        <input type="text" id="firstchoice" style=" width:60%;">
+                        
+                        <br>
+                        <input type="text" id="secondchoice" style=" width:60%;" class="mt-2" >
+                        <br>
+                        
+                      <input type="text" id="thirdchoice" style=" width:60%;" class="mt-2">
+            
+                      
+                    </li>
+                  </ul>
+                </div>
+                
+                <!-- disclaimer -->
+              <div class="backgroundcolor">
+                <h6 class=" p-1 mb-0 bordertesda"> 5. Privacy Disclaimer:   </h6>
+              </div>
+              <div class="bordertesda">
+                <p class="p-2 justify" style="font-weight: bold;">
+                  In case your application for TESDA scholarship will be approved, do you allow TESDA to share any of the relevant
+                  information which you provided in this Form with any other legitimate entities for possible employment whether prior,
+                  during or after your training? Kindly check your preference and sign over your printed name below. 
+                  <!-- yes -->
+                      <div>
+                        <div>
+                          <label class="mb-0 mt-2 px-3">
+                            <input type="checkbox" name="herby" class="disclaimer" id="yesdis" value="Yes, I hereby authorize TESDA to share my relevant information under this Form with other legitimate entities for
+                            the purpose of possible employment with potential employers. " onClick="ckChange(this)"/>
+                            <span style=" font-size: 12px; color: black; padding-bottom: 0em; padding-left: 23px;"> 
+                              <i  style="font-weight: bold;"> Yes, I hereby authorize TESDA to share my relevant information under this Form with other legitimate entities for
+                              the purpose of possible employment with potential employers. </i></span>
+                          </label>
+                        </div> 
+                          <div class="row px-3 ml-4  "> 
+                            <div class="col-lg-6">
+                              <input type="text" id="yestesdasignature"  style="width:60%; " placeholder="Fullname" disabled><br>
+                                <p class="ml-5" style="font-weight: bold;"> Over Printed Name</p> 
+                            </div>
+                            <div class="col-lg-6 "> 
+                              <p style="font-weight: bold;">Date 
+                                <input type="text" id="yestesdadate" style="width:80%;"  class="ml-2" placeholder="mm/dd/yyyy" disabled> 
+                              </p>
+                            </div>  
+                          </div> 
+                      </div>
+            
+                      <!-- no -->
+                      <div>
+                        <div>
+                          <label class="mb-0 mt-2 px-3">
+                            <input type="checkbox" name="herby" class="disclaimer" id="nodis" value="No, I do not give my consent and I do not authorize the sharing of my personal data under this Form. Instead, I want
+                            my information to be restricted only for TESDA’s use in processing my scholarship application and profiling
+                            purposes. "  onClick="ckChange(this)"/>
+                            <span style=" font-size: 12px; color: black; padding-bottom: 0em; padding-left: 23px;"> 
+                              <i  style="font-weight: bold;"> No, I do not give my consent and I do not authorize the sharing of my personal data under this Form. Instead, I want
+                                my information to be restricted only for TESDA’s use in processing my scholarship application and profiling
+                                purposes. </i></span>
+                          </label>
+                        </div>
+                        <div class="row px-3 ml-4"> 
+                            <div class="col-lg-6 ">  
+                              <input type="text" id="notesdasignature" style="width:60%; " placeholder="Fullname" disabled><br> 
+                              <p class="ml-5" style="font-weight: bold;"> Over Printed Name</p> 
+                            </div>
+                            <div class="col-lg-6 "> 
+                              <p style="font-weight: bold;">Date 
+                                <input type="text" id="notesdadate" style="width:80%; "  class="ml-2" placeholder="mm/dd/yyyy" disabled> 
+                              </p> 
+                            </div> 
+                        </div>
+                      </div>
+                    
+                    </p>
+              </div> 
+              <br>
+              
+           
+              <p class="font-weight-bold pb-0" style="font-size: 13px;"> Qualifications you enrolled in : </p>
+              <select name="tesdaqualifications" id="tesdaqualifications" class="form-control px-2" style="font-weight: bold;">
+                <option value="" disabled selected> Select: </option> 
+                <option value="FBS NC 2"> FBS NC 2</option>
+                <option value="FBS NC 2"> FBS NC 3</option> 
+                <option value="FBS NC 2"> HOUSEKEEPING NC 2</option> 
+                <option value="FBS NC 2"> COOKERY NC 2</option> 
+              </select>
+              
+              <select name="yearleveltesda" id="yearleveltesda" class="form-control px-2" style="font-weight: bold;">
+                  <option selected disabled> Year Level</option>
+                  <option value="1st Year"> 1st  Year </option>
+                  <option value="2nd Year"> 2nd Year</option> 
+              </select>    
+              
+              
+
+                  <h3 class="text-danger font-weight-bold"> Take note: <i class="text-dark" style="font-size:14px;">  Please review all your information before submitting. </i></h3>
+ 
+                    <h5 class="ml-4 text-danger font-weight-bold" style="text-decoration: underline;">  Choose your prefered tesda scholarship respectively:    
+                  <button type="button" class="btn btn-primary  ml-3" id="twspapply"> Submit as TWSP applicant </button>
+                  <button type="button" class="btn btn-primary  ml-3" id="stepapply"> Submit as STEP applicant </button>
+                </h5>
+                    <div class="clearfix"></div>
+                  <h6 class="p-0 mt-1 col-sm-12" id="posts" style="height: 1em;"></h6>
+
+                  <div class="progress bg-dark p-0 " style="height: .5rem;">
+                    <div class="progress-bar bg-success p-0 m-0" id="upload-progress" style="width: 0%; font-size: 9px;">
+                      0%
+                    </div>
+                  </div>
+                  
+                  </form>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="col-md-4">
+              <div class="card card-profile">
+                <div class="card-avatar">
+                  <a href="javascript:;">
+                    <img class="img" src="../assets/img/faces/marc.jpg" />
+                  </a>
+                </div>
+                <div class="card-body">
+                  <h4 class="text-left font-weight-bold">Notifications</h4>
+                  <h6 class="card-category text-gray">CEO / Co-Founder</h6>
+                  <h4 class="card-title">Alec Thompson</h4>
+                  <p class="card-description">
+                    Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
+                  </p>
+                  <a href="javascript:;" class="btn btn-primary btn-round">Follow</a>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+
+ 
+
+      </div>
+ 
+
+      <footer class="footer">
+        <div class="container-fluid">
+          
+          <div class="copyright float-right">
+            &copy;
+            <script>
+              document.write(new Date().getFullYear())
+            </script> Applicants, Good Luck! :)
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div> 
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+   
+   
+     <!-- <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+     
+     <!-- <script src="/js/multichedtrans.js"></script> -->
+
+     <script src="/js/auth.js"></script>
+    
+     <script>
+      firebase.auth().onAuthStateChanged(function(user){
+    
+        if(!user){
+         window.location.href = "/index.html";
+        }
+      });
+    </script>
+
+    <!-- checkbox js -->
+    <script>
+        function ckChange(ckType){
+            var ckName = document.getElementsByName(ckType.name);
+            var checked = document.getElementById(ckType.id);
+
+            if (checked.checked) {
+              for(var i=0; i < ckName.length; i++){
+
+                  if(!ckName[i].checked){
+                      ckName[i].disabled = true;
+                  }else{
+                      ckName[i].disabled = false;
+                  }
+              } 
+            }
+            else {
+              for(var i=0; i < ckName.length; i++){
+                ckName[i].disabled = false;
+              } 
+            }    
+        }
+    </script>
+
+    <!-- enable input -->
+    <script>
+      document.getElementById('yesdis').onchange = function() {
+        document.getElementById('yestesdasignature').disabled = !this.checked;
+        document.getElementById('yestesdadate').disabled = !this.checked;
+      };
+
+      document.getElementById('nodis').onchange = function() {
+        document.getElementById('notesdasignature').disabled = !this.checked;
+        document.getElementById('notesdadate').disabled = !this.checked;
+      };
+    </script>
+    
+    <!--step tesda id with fillform --> 
+    <script>
+      function previewImage(steppostid){  
+      if(steppostid.files && steppostid.files[0]){
+        var reader = new FileReader(); 
+        reader.onload = function(e){ 
+          $("#tesdapreview").attr('src', e.target.result);
+          $("#tesdapreview").fadeIn();  
+        }
+        reader.readAsDataURL(steppostid.files[0]); 
+        }   
+    }
+
+    $("#tesdaidpicture").change(function(){
+          previewImage(this);
+    });  
+
+
+    
+    $("#stepapply").click(function(){ 
+
+        var image = $("#tesdaidpicture").prop("files")[0];  
+        var last  = $("#last").val(); 
+        var first  = $("#first").val(); 
+        var middle  = $("#middle").val();  
+        var streetnum  = $("#streetnum").val(); 
+        var city  = $("#city").val(); 
+        var emailadd  = $("#emailadd").val(); 
+        var barangay  = $("#barangay").val(); 
+        var province  = $("#province").val(); 
+        var celno  = $("#celno").val(); 
+        var district  = $("#district").val(); 
+        var region  = $("#region").val(); 
+
+        var gendervalue  = $("#gendervalue").val(); 
+        var civilstatus  = $("#civilstatus").val(); 
+        var employmentstatus  = $("#employmentstatus").val(); 
+        var mbirth  = $("#mbirth").val(); 
+        var dbirth  = $("#dbirth").val(); 
+        var ybirth  = $("#ybirth").val(); 
+        var placecity  = $("#placecity").val(); 
+        var placeprov  = $("#placeprov").val(); 
+        var placeregion  = $("#placeregion").val(); 
+        var attainment  = $("#attainment").val(); 
+
+        var parentname  = $("#parentname").val(); 
+        var parentno  = $("#parentno").val(); 
+        var classificationapplicant  = $("#classificationapplicant").val(); 
+        var firstchoice  = $("#firstchoice").val(); 
+        var secondchoice  = $("#secondchoice").val(); 
+        var thirdchoice  = $("#thirdchoice").val(); 
+
+        var disclaimer = $('.disclaimer:checked').val(); 
+
+        var yestesdadate  = $("#yestesdadate").val(); 
+        var yestesdasignature  = $("#yestesdasignature").val(); 
+        var notesdadate  = $("#notesdadate").val(); 
+        var notesdasignature  = $("#notesdasignature").val();  
+        var tesdaqualifications = $("#tesdaqualifications").val(); 
+        var yearleveltesda = $("#yearleveltesda").val(); 
+
+
+          
+        var rootRef = firebase.database().ref().child("Tesda/Step_applicants");
+        var userID = firebase.auth().currentUser.uid;
+        var usersRef = rootRef.child(userID);
+
+        //
+        rootRef.once("value").then(function(snapshot){
+
+        var name = image["name"]; 
+        var dateStr = new Date().getTime();
+        var fileCompleteName = name + "_" + dateStr; 
+
+        var storageRef = firebase.storage().ref("Step_applicants ID");
+        var postStorageRef = storageRef.child(fileCompleteName); 
+
+        var task = postStorageRef.put(image); 
+
+        task.on("state_changed", 
+
+          function progress(snapshot){
+            var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            
+            $("#upload-progress").html(Math.round(percentage)+ "%");
+            $("#upload-progress").attr("style", "width:" + percentage + "%");
+              
+            },
+            function error(err){
+
+            },
+            function complete(){
+              var user = firebase.auth().currentUser;
+              var username;
+              firebase.database().ref('Tesda/Step_applicants/' + user.uid).once('value').then(function(snapshot){
+                var first = (snapshot.val() && snapshot.val().first);
+                var last = (snapshot.val() && snapshot.val().last);
+
+                      username = first + " " + last;
+              });
+              
+              task.snapshot.ref.getDownloadURL().then(function(downdloadURL){
+
+                var time = new Date();
+
+                var options = {
+                    weekday: "long",
+                    month: "long",
+                    day: "2-digit",
+                    year: "numeric",
+                  }; 
+
+                  if(region!="" && last!="" && first!="" && middle!="" && streetnum!="" && city!="" ){
+
+                  var stepuserData = {
+                    "image": downdloadURL, 
+                    "name": fileCompleteName, 
+                    // "firstname": firstname,
+                    "uid":user.uid, 
+                    "username":username,
+                    "time": time.toLocaleDateString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                    "date": time.toLocaleDateString('en-US', options),
+                   
+                    "last": last, 
+                    "first": first,
+                    "middle": middle,
+                    "streetnum": streetnum,
+                    "city": city, 
+                    "emailadd": emailadd,
+                    "barangay": barangay,
+                    "province": province, 
+                    "celno": celno,
+                    "district": district,
+                    "region": region,
+                    "gendervalue": gendervalue,
+                    "civilstatus": civilstatus,
+                    "employmentstatus": employmentstatus,
+                    "mbirth": mbirth,
+                    "dbirth": dbirth,
+                    "ybirth": ybirth,
+                    "placecity": placecity,
+                    "placeprov": placeprov,
+                    "placeregion": placeregion,
+                    "attainment": attainment,
+                    "parentname": parentname,
+                    "parentno": parentno,
+                    "classificationapplicant": classificationapplicant,
+                    "firstchoice": firstchoice,
+                    "secondchoice": secondchoice,
+                    "thirdchoice": thirdchoice,
+                    "disclaimer": disclaimer, 
+                    "yestesdadate": yestesdadate,
+                    "yestesdasignature": yestesdasignature,
+                    "notesdadate": notesdadate,
+                    "notesdasignature": notesdasignature,
+                     
+                    "tesdaqualifications": tesdaqualifications,
+                    "yearleveltesda": yearleveltesda,
+                     
+                      
+                  };
+          
+                  usersRef.set(stepuserData, function(error){
+                  if(error){
+                          var errorCode = error.code;
+                          var errorMessage = error.message;
+
+                          console.log(errorCode);
+                          console.log(errorMessage);
+                          
+                          window.alert("Message: " + errorMessage);
+                      }
+                        else{
+
+                          $("#posts").attr("class", "alert alert-success");
+                          $("#posts").html("upload success.");
+
+                            // edit to homepage
+                            window.location.href = "/tesdaapplication_stepsignature.html"; 
+                        }
+                    });
+          
+                  }
+                  else{
+                      window.alert("Please fill out all fields.") 
+                  }
+          
+                    });
+                  });
+                }
+              ); 
+            });  
+
+        
+    </script>
+
+
+    <!--twsp tesda id with fillform --> 
+    <script>
+      function previewImage(twsppostid){  
+      if(twsppostid.files && twsppostid.files[0]){
+        var reader = new FileReader(); 
+        reader.onload = function(e){ 
+          $("#tesdapreview").attr('src', e.target.result);
+          $("#tesdapreview").fadeIn();  
+        }
+        reader.readAsDataURL(twsppostid.files[0]); 
+        }   
+    }
+
+    $("#tesdaidpicture").change(function(){
+          previewImage(this);
+    });  
+
+
+
+    $("#twspapply").click(function(){ 
+
+        var image = $("#tesdaidpicture").prop("files")[0];  
+        var last  = $("#last").val(); 
+        var first  = $("#first").val(); 
+        var middle  = $("#middle").val();  
+        var streetnum  = $("#streetnum").val(); 
+        var city  = $("#city").val(); 
+        var emailadd  = $("#emailadd").val(); 
+        var barangay  = $("#barangay").val(); 
+        var province  = $("#province").val(); 
+        var celno  = $("#celno").val(); 
+        var district  = $("#district").val(); 
+        var region  = $("#region").val(); 
+
+        var gendervalue  = $("#gendervalue").val(); 
+        var civilstatus  = $("#civilstatus").val(); 
+        var employmentstatus  = $("#employmentstatus").val(); 
+        var mbirth  = $("#mbirth").val(); 
+        var dbirth  = $("#dbirth").val(); 
+        var ybirth  = $("#ybirth").val(); 
+        var placecity  = $("#placecity").val(); 
+        var placeprov  = $("#placeprov").val(); 
+        var placeregion  = $("#placeregion").val(); 
+        var attainment  = $("#attainment").val(); 
+        var parentname  = $("#parentname").val(); 
+        var parentno  = $("#parentno").val(); 
+        var classificationapplicant  = $("#classificationapplicant").val(); 
+        var firstchoice  = $("#firstchoice").val(); 
+        var secondchoice  = $("#secondchoice").val(); 
+        var thirdchoice  = $("#thirdchoice").val(); 
+        var disclaimer = $('.disclaimer:checked').val();
+        var yestesdadate  = $("#yestesdadate").val(); 
+        var yestesdasignature  = $("#yestesdasignature").val(); 
+        var notesdadate  = $("#notesdadate").val(); 
+        var notesdasignature  = $("#notesdasignature").val();  
+        var tesdaqualifications = $("#tesdaqualifications").val(); 
+        var yearleveltesda = $("#yearleveltesda").val(); 
+
+
+         
+
+        
+        // database
+        var rootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+        var userID = firebase.auth().currentUser.uid;
+        var usersRef = rootRef.child(userID);
+ 
+        rootRef.once("value").then(function(snapshot){
+
+        var name = image["name"]; 
+        var dateStr = new Date().getTime();
+        var fileCompleteName = name + "_" + dateStr; 
+
+        var storageRef = firebase.storage().ref("Twsp_applicants ID");
+        var postStorageRef = storageRef.child(fileCompleteName); 
+
+        var task = postStorageRef.put(image); 
+
+        task.on("state_changed", 
+
+          function progress(snapshot){
+            var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+            
+            $("#upload-progress").html(Math.round(percentage)+ "%");
+            $("#upload-progress").attr("style", "width:" + percentage + "%");
+              
+            },
+            function error(err){
+
+            },
+            function complete(){
+              var user = firebase.auth().currentUser;
+              var username;
+              firebase.database().ref('Tesda/Twsp_applicants/' + user.uid).once('value').then(function(snapshot){
+                var first = (snapshot.val() && snapshot.val().first);
+                var last = (snapshot.val() && snapshot.val().last);
+
+                      username = first + " " + last;
+              });
+              
+              task.snapshot.ref.getDownloadURL().then(function(downdloadURL){
+
+                var time = new Date();
+
+                var options = {
+                    weekday: "long",
+                    month: "long",
+                    day: "2-digit",
+                    year: "numeric",
+                  }; 
+
+                  if(region!="" && last!="" && first!="" && middle!="" && streetnum!="" && city!="" ){
+
+                  var twspuserData = {
+                    "image": downdloadURL, 
+                    "name": fileCompleteName, 
+                    // "firstname": firstname,
+                    "uid":user.uid, 
+                    "username":username,
+                    "time": time.toLocaleDateString('en-US', {hour: 'numeric', minute: 'numeric', hour12: true}),
+                    "date": time.toLocaleDateString('en-US', options),
+                  
+                    "last": last, 
+                    "first": first,
+                    "middle": middle,
+                    "streetnum": streetnum,
+                    "city": city, 
+                    "emailadd": emailadd,
+                    "barangay": barangay,
+                    "province": province, 
+                    "celno": celno,
+                    "district": district,
+                    "region": region,
+                    "gendervalue": gendervalue,
+                    "civilstatus": civilstatus,
+                    "employmentstatus": employmentstatus,
+                    "mbirth": mbirth,
+                    "dbirth": dbirth,
+                    "ybirth": ybirth,
+                    "placecity": placecity,
+                    "placeprov": placeprov,
+                    "placeregion": placeregion,
+                    "attainment": attainment,
+                    "parentname": parentname,
+                    "parentno": parentno,
+                    "classificationapplicant": classificationapplicant,
+                    "firstchoice": firstchoice,
+                    "secondchoice": secondchoice,
+                    "thirdchoice": thirdchoice, 
+                    "disclaimer": disclaimer,
+                    "yestesdadate": yestesdadate,
+                    "yestesdasignature": yestesdasignature,
+                    "notesdadate": notesdadate,
+                    "notesdasignature": notesdasignature, 
+                    "tesdaqualifications": tesdaqualifications,
+                    "yearleveltesda": yearleveltesda,
+                  };
+          
+                  usersRef.set(twspuserData, function(error){
+                  if(error){
+                          var errorCode = error.code;
+                          var errorMessage = error.message;
+
+                          console.log(errorCode);
+                          console.log(errorMessage);
+                          
+                          window.alert("Message: " + errorMessage);
+                      }
+                        else{
+                          $("#posts").attr("class", "alert alert-success");
+                          $("#posts").html("upload success.");
+
+                            // edit to homepage
+                            window.location.href = "/examples/tesdaapplication_twspsignature.html"; 
+                        }
+                    });
+          
+                  }
+                  else{
+                      window.alert("Please fill out all fields.") 
+                  }
+          
+                    });
+                  });
+                }
+              ); 
+            });  
+
+
+
+        
+    </script>
+
+</body>
+
+</html>

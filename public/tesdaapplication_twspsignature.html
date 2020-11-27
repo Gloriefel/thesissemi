@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Signature Pad demo</title>
+  <meta name="description" content="Signature Pad - HTML5 canvas based smooth signature drawing using variable width spline interpolation.">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/signature-pad.css">
+
+  <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/ie9.css">
+  <![endif]-->
+
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39365077-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+<body onselectstart="return false"> 
+  <div>
+    <h5> Please affix your signature <br class="mt-2"> on the signature-pad beside.
+      <br class="mt-2"> then save and upload.</h5>
+  </div>
+  <div id="signature-pad" class="signature-pad">
+    <div class="signature-pad--body">
+      <canvas></canvas>
+    </div>
+    <div class="signature-pad--footer">
+      <div class="description">Sign above</div>
+
+      <div class="signature-pad--actions">
+        <div>
+          <button type="button" class="button clear" data-action="clear">Clear</button> 
+
+        </div>
+        <div>
+          <button type="button" class="button save" data-action="save-png">Save as PNG</button> 
+        </div>
+        <label class="p-0 mx-auto"> signature upload
+          <input name="signature" type="file"  id="fileButton" accept="image/*" style=" position: absolute; z-index: -1; width: .1in; height: .1in;">
+         </label> 
+      
+      </div>
+    </div> 
+
+    </div> 
+      
+   
+
+
+
+  
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+
+
+  <!-- <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script> 
+
+
+  <script src="/js/tesdasignature_pad.umd.js"></script>
+  <script src="/js/tesdaapp.js"></script> 
+ 
+
+
+  <script>
+
+    
+  var firebaseConfig = {
+    apiKey: "AIzaSyD__F-N2U7KViRAxUEaNDz3P_Fp63MrPzk",
+    authDomain: "sisascb.firebaseapp.com",
+    databaseURL: "https://sisascb.firebaseio.com",
+    projectId: "sisascb",
+    storageBucket: "sisascb.appspot.com",
+    messagingSenderId: "616128933101",
+    appId: "1:616128933101:web:82691722438e08c7d070e4",
+    measurementId: "G-56W55HQ6QK"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig); 
+
+
+    var fileButton = document.getElementById('fileButton');
+
+    fileButton.addEventListener("change",function(e){
+      var file= e.target.files[0];
+      //create storage ref to the firebase storage
+      var storageRef = firebase.storage().ref('TesdaTwsp_applicants Requirements').child(file.name);
+      var task = storageRef.put(file);
+      task.on("state_changed",function(snapshot){
+          var percentage= (snapshot.bytesTransferred/snapshot.totalBytes) * 100;
+          if(percentage==100){
+              storageRef.getDownloadURL().then(function (url) {
+                // You will get the Url here.
+               
+                var rootRef = firebase.database().ref().child("Tesda/Twsp_applicants");
+                var userID = firebase.auth().currentUser.uid;
+                var firebaseRef = rootRef.child(userID);
+
+                var signatureurl = {
+                  "signature": url,
+                };
+                firebaseRef.update(signatureurl).then(function(){
+                  alert("Image Uploaded and also updated to the database");
+                  window.location.href = "/tesdaapplication_twsprequirements.html";  
+              });
+            });
+          }
+      });
+    });
+  </script>
+
+</body>
+</html>

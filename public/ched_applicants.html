@@ -1,0 +1,958 @@
+<!--
+=========================================================
+Material Dashboard - v2.1.2
+=========================================================
+
+Product Page: https://www.creative-tim.com/product/material-dashboard
+Copyright 2020 Creative Tim (https://www.creative-tim.com)
+Coded by Creative Tim
+
+=========================================================
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+   ASCB CHED-TESDA Scholarship Information System
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <!-- CSS Files -->
+  <link type="text/css" href="/css/fillup.css" rel="stylesheet">
+
+  <link href="../assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+  
+     <!-- <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+     <script src="/bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+     <link rel="stylesheet" href="/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+       --> 
+     
+</head>
+
+<body>
+
+
+
+<div id="userpage">
+
+  <div class="wrapper ">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="/img/icons/icon128x128.png">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+    <div class="logo">
+      <a href="/homepage.html" class="simple-text logo-normal" style="text-transform: lowercase;">
+        <img src="/img/ched.png"  width="50px" height="50px" class="float-left ml-2">
+
+      <h6 class="px-2 mt-2" style="font-size: 12px;"> 
+        CHED  Information System    <br>
+        For College Students    </h6>
+    </a></div>
+    <div class="sidebar-wrapper">
+      <ul class="nav">
+        <li class="nav-item ">
+          <a class="nav-link" href="/ched_enrollee.html">
+            <i class="material-icons"> groups</i>
+            <p> Enrollees</p>
+          </a>
+        </li>           
+        <li class="nav-item active">
+          <a class="nav-link" href="/ched_applicants.html">
+            <i class="material-icons">receipt_long</i>
+            <p>List of Applicants</p>
+          </a>
+        </li>
+        <li class="nav-item  ">
+          <a class="nav-link" href="/ched_qualifiedapplicants.html">
+            <i class="material-icons">    how_to_reg </i>
+            <p>Qualified Scholars</p>
+          </a>
+        </li>
+        <li class="nav-item  ">
+          <a class="nav-link" href="/ched_officialscholars.html">
+            <!-- <i class="material-icons">   stars </i> -->
+            <i class="material-icons">   star         </i>
+            <p>Official Scholars</p>
+          </a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link" href="/ched_adminupdates.html">              
+            <i class="material-icons"> touch_app </i>
+            <!-- <i class="material-icons">   admin_panel_settings   </i> -->
+            <p>Updates</p>
+          </a>
+        </li>
+        <li class="nav-item active-pro mb-5">
+          <a class="nav-link" href="/tesda_enrollee.html">
+            <i class="material-icons">shuffle</i>
+            <p>Switch TESDA</p>
+          </a>
+        </li> 
+        <li class="nav-item active-pro ">
+          <a class="nav-link" id="logout">
+            <i class="material-icons">login</i>
+            <p>Logout</p>
+          </a>
+        </li> 
+      </ul>
+    </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      
+      <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute fixed-top ">
+        <div class="container-fluid">
+         
+          <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+            <span class="navbar-toggler-icon icon-bar"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end"> 
+            
+          </div>
+        </div>
+       
+      </nav>
+      <div class="content">
+         <div class="container-fluid "> 
+                <div class="col-md-12">
+                  <div class="card">
+                    <script>
+                      var applicantslist=0;
+                      var disapplicantslist=0;
+                    </script>
+                    <div class="card-header card-header-primary pb-0">
+                        <ul class="p-0 d-flex nav nav-tabs" role="tablist" style="justify-content: space-between;">
+                          <li class="card-title"><a href="#hometab" role="tab" data-toggle="tab" style="color: white;"><h4> List of Applicants</h4></a></li> 
+                          <li><a href="#jquerytab" role="tab" data-toggle="tab" style="color: white; font-style: italic;">Recorded Applicants</a></li> 
+                        </ul> 
+                      
+                      <p class="card-category"> Year
+                         <h3 class="m-0 p-0">
+                        <script>
+                          document.write(new Date().getFullYear())
+                        </script>
+                      </h3> </p>
+                      
+                    </div>
+                    <div class="card-body">
+                      <p id="resultched"></p>
+                      <div id="award"></div>
+                      
+                      <div class="tab-content">
+                        <div class="tab-pane active" id="hometab">
+                          <table class="table">
+                            <thead class=" text-primary ">
+                              <th >
+                                ID Picture
+                              </th>
+                              <th>
+                                Name of Applicant
+                              </th>
+                              <th>
+                                Application Form
+                              </th>                          
+                              <th class="text-center">
+                                 Requirements
+                              </th>
+                              <th class="text-center">
+                               Remarks
+                             </th>
+                               
+                              
+                            </thead>
+                            <tbody id="applicationform">
+                             
+                            </tbody>
+  
+                            
+                          </table> 
+                        </div> 
+
+                        <div class="tab-pane " id="jquerytab"> 
+
+                          <table class="table">
+                            <thead class=" text-primary ">
+                              <th >
+                                ID Picture
+                              </th>
+                              <th>
+                                Last Name
+                              </th>
+                              <th>
+                                First Name
+                              </th>
+                              <th>
+                                Middle Name
+                              </th>
+                              <th class="text-center">
+                                Course
+                              </th>
+                              <th class="text-center">
+                                Year Level
+                              </th>                          
+                               
+                              
+                            </thead>
+                            <tbody id="disqualified">
+                             
+                            </tbody>
+                            <!-- <label> Export
+                            <input type="button" name="" id="export">
+                          </label> -->
+                            
+                          </table>
+                        </div>
+
+
+                        
+                      </div>
+                     
+                    </div>
+                  </div>                
+                </div>  
+                
+               
+        </div>    
+      </div>
+      
+         
+    
+    </div>
+    
+  </div> 
+</div>
+
+
+
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap-material-design.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!-- Plugin for the momentJs  -->
+  <script src="../assets/js/plugins/moment.min.js"></script>
+  <!--  Plugin for Sweet Alert -->
+  <script src="../assets/js/plugins/sweetalert2.js"></script>
+  <!-- Forms Validations Plugin -->
+  <script src="../assets/js/plugins/jquery.validate.min.js"></script>
+  <!-- Plugin for the Wizard, full documentation here: https://github.com/VinceG/twitter-bootstrap-wizard -->
+  <script src="../assets/js/plugins/jquery.bootstrap-wizard.js"></script>
+  <!--	Plugin for Select, full documentation here: http://silviomoreto.github.io/bootstrap-select -->
+  <script src="../assets/js/plugins/bootstrap-selectpicker.js"></script>
+  <!--  Plugin for the DateTimePicker, full documentation here: https://eonasdan.github.io/bootstrap-datetimepicker/ -->
+  <script src="../assets/js/plugins/bootstrap-datetimepicker.min.js"></script>
+  <!--  DataTables.net Plugin, full documentation here: https://datatables.net/  -->
+  <script src="../assets/js/plugins/jquery.dataTables.min.js"></script>
+  <!--	Plugin for Tags, full documentation here: https://github.com/bootstrap-tagsinput/bootstrap-tagsinputs  -->
+  <script src="../assets/js/plugins/bootstrap-tagsinput.js"></script>
+  <!-- Plugin for Fileupload, full documentation here: http://www.jasny.net/bootstrap/javascript/#fileinput -->
+  <script src="../assets/js/plugins/jasny-bootstrap.min.js"></script>
+  <!--  Full Calendar Plugin, full documentation here: https://github.com/fullcalendar/fullcalendar    -->
+  <script src="../assets/js/plugins/fullcalendar.min.js"></script>
+  <!-- Vector Map plugin, full documentation here: http://jvectormap.com/documentation/ -->
+  <script src="../assets/js/plugins/jquery-jvectormap.js"></script>
+  <!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+  <script src="../assets/js/plugins/nouislider.min.js"></script>
+  <!-- Include a polyfill for ES6 Promises (optional) for IE11, UC Browser and Android browser support SweetAlert -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <!-- Library for adding dinamically elements -->
+  <script src="../assets/js/plugins/arrive.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chartist JS -->
+  <script src="../assets/js/plugins/chartist.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/material-dashboard.js?v=2.1.2" type="text/javascript"></script>
+  <!-- Material Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+
+        $sidebar_img_container = $sidebar.find('.sidebar-background');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+        if (window_width > 767 && fixed_plugin_open == 'Dashboard') {
+          if ($('.fixed-plugin .dropdown').hasClass('show-dropdown')) {
+            $('.fixed-plugin .dropdown').addClass('open');
+          }
+
+        }
+
+        $('.fixed-plugin a').click(function(event) {
+          // Alex if we click on switch, stop propagation of the event, so the dropdown will not be hide, otherwise we set the  section active
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .active-color span').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-color', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .background-color .badge').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('background-color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data-background-color', new_color);
+          }
+        });
+
+        $('.fixed-plugin .img-holder').click(function() {
+          $full_page_background = $('.full-page-background');
+
+          $(this).parent('li').siblings().removeClass('active');
+          $(this).parent('li').addClass('active');
+
+
+          var new_image = $(this).find("img").attr('src');
+
+          if ($sidebar_img_container.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            $sidebar_img_container.fadeOut('fast', function() {
+              $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+              $sidebar_img_container.fadeIn('fast');
+            });
+          }
+
+          if ($full_page_background.length != 0 && $('.switch-sidebar-image input:checked').length != 0) {
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $full_page_background.fadeOut('fast', function() {
+              $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+              $full_page_background.fadeIn('fast');
+            });
+          }
+
+          if ($('.switch-sidebar-image input:checked').length == 0) {
+            var new_image = $('.fixed-plugin li.active .img-holder').find("img").attr('src');
+            var new_image_full_page = $('.fixed-plugin li.active .img-holder').find('img').data('src');
+
+            $sidebar_img_container.css('background-image', 'url("' + new_image + '")');
+            $full_page_background.css('background-image', 'url("' + new_image_full_page + '")');
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.css('background-image', 'url("' + new_image + '")');
+          }
+        });
+
+        $('.switch-sidebar-image input').change(function() {
+          $full_page_background = $('.full-page-background');
+
+          $input = $(this);
+
+          if ($input.is(':checked')) {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar_img_container.fadeIn('fast');
+              $sidebar.attr('data-image', '#');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page_background.fadeIn('fast');
+              $full_page.attr('data-image', '#');
+            }
+
+            background_image = true;
+          } else {
+            if ($sidebar_img_container.length != 0) {
+              $sidebar.removeAttr('data-image');
+              $sidebar_img_container.fadeOut('fast');
+            }
+
+            if ($full_page_background.length != 0) {
+              $full_page.removeAttr('data-image', '#');
+              $full_page_background.fadeOut('fast');
+            }
+
+            background_image = false;
+          }
+        });
+
+        $('.switch-sidebar-mini input').change(function() {
+          $body = $('body');
+
+          $input = $(this);
+
+          if (md.misc.sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            md.misc.sidebar_mini_active = false;
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar();
+
+          } else {
+
+            $('.sidebar .sidebar-wrapper, .main-panel').perfectScrollbar('destroy');
+
+            setTimeout(function() {
+              $('body').addClass('sidebar-mini');
+
+              md.misc.sidebar_mini_active = true;
+            }, 300);
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+
+        });
+      });
+    });
+  </script>
+
+
+     <!-- The core Firebase JS SDK is always required and must be listed first -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-database.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-storage.js"></script>
+   
+   
+     <!-- <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-firestore.js"></script> -->
+     <script src="https://www.gstatic.com/firebasejs/7.15.4/firebase-functions.js"></script>
+     
+   
+      
+      <!-- database refer -->
+   <script src="/js/auth.js"></script>  
+
+
+
+   <script>
+     firebase.auth().onAuthStateChanged(function(user){
+   
+       if(!user){
+        window.location.href = "/";
+         
+       }
+     });
+
+ 
+   </script>  
+ 
+  <!-- applicants ui -->
+  <script>
+    var dbList = firebase.database().ref().child("Ched/Ched_applicants").orderByChild("applicantslist");
+
+    dbList.on("value", function(applicationform){
+        if(applicationform.exists){
+        var applicationformHtml =""; 
+        applicationform.forEach(function(singleApplicant){
+          applicantslist = applicantslist + 1;
+
+        applicationformHtml += "<tr> <form> ";  
+          applicationformHtml += "<td> <img style='width:.5in; height:.5in;' src='" +singleApplicant.val().image + "'/></td>"; 
+
+          applicationformHtml += "<td> <h4>   " +singleApplicant.val().lastname + "," + " " ; 
+            applicationformHtml +=   singleApplicant.val().firstname; 
+          applicationformHtml += " " + " " + " " + " " + singleApplicant.val().middlename + " </h4> </td>";  
+
+          applicationformHtml += "<td> <label class='text-dark mt-1 text-center'>  <h4  data-toggle='modal' data-target='#"+singleApplicant.val().lastname+"'> Form </h4> </label>";   
+            
+            applicationformHtml += "<div class='modal fade' id='"+singleApplicant.val().lastname+"' role='dialog'>";  
+            
+              applicationformHtml += "<div class='modal-dialog'>  <div class='modal-content content mx-auto' > <div class='modal-header'> ";   
+                applicationformHtml += " <button type='button' class='close pull-right mb-3' data-dismiss='modal'>&times;</button> ";  
+                applicationformHtml += "<label> <span class='material-icons'>print</span> <input type='button' onclick=printDiv('printme') style='position: absolute; z-index: -1;'> </input> </label> <div class='modal-body p-0 m-0' id='printme'>";    
+                // modalbody
+                
+                //  1 layer 
+                applicationformHtml += "<div class='mt-4' style='border: solid; border-width: thin;> ";
+                  applicationformHtml += "<div id='fillform' class='mb-5'> <ul class='p-0 m-0' style='display: grid; grid-template-columns: 1fr 1fr 1fr;'>";
+                  applicationformHtml += "<li> <h6 class='headerfont' style='text-transform:none;'> <i> CHED-Scholarship Application Form  <br> 2019 version <b class='capslock'> (Not for Sale)  </b> </i> </h6> <img src='/img/ched.png' width='80px' height='80px' class='ml-5'></li>";  
+                  applicationformHtml += "<li class='mt-5'>  <p class='guidetwo text-center'> Office of the President of the Philippines     <br class='text-center' style='text-transform: uppercase;'> Commission on Higher Education   <br  class='text-center' style='text-transform: uppercase;''> Regional Office  " +singleApplicant.val().region  + " </p>";
+                  applicationformHtml += "<br>    <h6 class='capslock p-0 text-center' style='font-size: 16px;'> <b> Ched Scholarship Program (CSP) </b></h6> <h6 class='capslock text-center' style='font-size: 14px;'> Application Form</h6><li>";
+                  applicationformHtml += "<div class='mr-2' style='display: grid; grid-template-columns: 1fr; float:right;'>  <h6 class='right text-center' style='font-size: 12px;'>Annex 'A' </h6>    <img style='width:2in; height:2in;' src='" +singleApplicant.val().image + "'/>  </div>";
+                  applicationformHtml += "</ul> <i class='headerfont mt-5' style='font-size: 14x; font-weight: bolder;'>Instructions: Read General and Documentary Requirements. Fill in all the required information. Do not leave an item blank. If item is not applicable, indicate 'N/A'.</i> </div>";  
+                // 
+
+                // 2 layer
+                applicationformHtml += "<div style='background-color: rgb(233, 233, 233); border: solid; border-width: thin;'> <h6 class='text-uppercase text-center h6 mt-1' id='personalinfor'> <b> Personal Information </b></h6> </div>";
+                
+                // 3 layer
+                applicationformHtml += "<div id='chedpersonalinfo' style='border: solid; border-width: thin;'>   "; 
+                  applicationformHtml += "  <ul class='p-0 m-0'>";
+                    applicationformHtml += " <li class='shade' style='border-right: solid; border-bottom: solid; border-width: thin;'><p class='mt-4 guide '> 1. Name</p> </li>";
+                    applicationformHtml += "   <li  style='border-right: solid; border-bottom: solid;  border-width: thin'>   <p class='databasetext p-0 m-0'> "+ singleApplicant.val().lastname +"    <p class='guide shade p-0 text-center' style=' border-top: solid; border-width: thin'><i>(Last Name) <br> put extension, if any: i.e. Jr., III   </i></p> </li>";
+                    applicationformHtml += "   <li  style='border-right: solid; border-bottom: solid;  border-width: thin'>   <p class=' databasetext p-0 m-0'> "+ singleApplicant.val().firstname +"   <p class='guide shade pt-2 pb-3 text-center' style=' border-top: solid; border-width: thin'><i>(First Name) </i></p> </li>";
+                    applicationformHtml += "   <li  style='border-right: solid; border-bottom: solid;  border-width: thin'>   <p class='databasetext p-0 m-0'> "+ singleApplicant.val().middlename +"    <p class='guide shade pt-2 pb-3 text-center' style=' border-top: solid; border-width: thin'><i>(Middle Name) </i></p> </li>";
+                    applicationformHtml += "   <li  style='  border-bottom: solid;  border-width: thin'>   <p class='databasetext p-0 m-0'> "+ singleApplicant.val().maidenname +"   <p class='guide shade p-0  text-center' style=' border-top: solid; border-width: thin'><i>Maiden Name <br> (for Married Women)</i></p> </li>";
+                applicationformHtml += "</ul> </div> ";
+                                  
+                // 4 layer
+                applicationformHtml += " <div  id='firstthree' style='border-bottom: solid; border-right: solid; border-left: solid; border-width: thin;'>";
+                  applicationformHtml += " <ul class=' p-0 m-0'>"; 
+                    applicationformHtml += "  <li class='  shade guidetwo ' style='border-right: solid; border-bottom: solid;  border-width: thin' > 2. Date of Birth </li>"; 
+                    applicationformHtml += "  <li class='  databasetext' style='border-right: solid; border-bottom: solid; border-width: thin;' >  "+ singleApplicant.val().bday +" </li>"; 
+                    applicationformHtml += "  <li class='shade guidetwo' > 9. Present Address </li>"; 
+                    applicationformHtml += "  <li class='  databasetext' style='border-right: solid; border-left: solid; border-bottom: solid; border-width: thin;' >  "+ singleApplicant.val().paddress +" </li>"; 
+                    applicationformHtml += "  <li class=' shade guidetwo' style='border-right: solid; border-bottom: solid; border-width: thin;'>  3. Place of Birth </li>"; 
+                    applicationformHtml += "  <li class=' databasetext' style='border-right: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().placebirth +" </li>"; 
+                    applicationformHtml += "  <li  class='shade'>    </li>"; 
+                    applicationformHtml += "  <li class='  databasetext' style='border-right:solid;border-left: solid; border-bottom: solid; border-width: thin;'> "+ singleApplicant.val().paddresscont +"   </li>"; 
+                    applicationformHtml += "  <li class=' shade guidetwo' style='border-right: solid;border-width: thin'>  4. Sex  </li>"; 
+                    applicationformHtml += "  <li class='  databasetext' style='border-right: solid;border-width: thin'>  "+ singleApplicant.val().gender +" </li>"; 
+                    applicationformHtml += "  <li class='  shade guidetwo' >  10. Zip Code </li>"; 
+                    applicationformHtml += "  <li class='  databasetext' style='border-right: solid; border-left: solid;   border-width: thin;'  >  "+ singleApplicant.val().presentzipcode +" </li>"; 
+                applicationformHtml += "</ul> </div> ";
+
+
+                // 5 layer                 
+                applicationformHtml += " <div  id='firstthree' style='border: solid; border-width: thin;'>";
+                  applicationformHtml += " <ul class=' p-0 m-0'>"; 
+                    applicationformHtml += "  <li class='  shade guidetwo' style='border-right: solid; border-width: thin' > </li>"; 
+                    applicationformHtml += "  <li class='  databasetext' style='border-right:solid;    border-width: thin' >  " +" </li>"; 
+                    applicationformHtml += "  <li class='  shade guidetwo' > 9. Permanent Address  </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right:solid; border-left: solid; border-bottom: solid; border-width: thin;' >  "+ singleApplicant.val().permanentadd +" </li>"; 
+                    applicationformHtml += "  <li class=' shade guidetwo' style='border-right: solid;  border-width: thin' >  5. Civil Status </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right: solid; border-width: thin'>  "+ singleApplicant.val().applicantstatus +" </li>"; 
+                    applicationformHtml += "  <li  class='shade'>    </li>"; 
+                    applicationformHtml += "  <li   class=' databasetext' style='border-right:solid; border-left: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().permanentaddcont +"  </li>"; 
+                    applicationformHtml += "  <li class='  shade guidetwo'  style='border-right:solid;border-width: thin;'>   </li>"; 
+                    applicationformHtml += "  <li class=' databasetext'  style='border-right:solid;border-width: thin;'>     </li>"; 
+                    applicationformHtml += "  <li class=' shade guidetwo' >   10. Zip Code  </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right:solid; border-left: solid;   border-width: thin;' >  "+ singleApplicant.val().permanentzipcode +" </li>"; 
+                applicationformHtml += "</ul> </div> ";
+
+                // 6 layer
+                applicationformHtml += " <div  id='firstthree' style='border: solid; border-width: thin;'>";          
+                  applicationformHtml += " <ul class=' p-0 m-0'>";  
+                    applicationformHtml += "  <li  style='border-right: solid; border-bottom: solid;  border-width: thin' class=' shade guidetwo'>    6. Citizenship </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().citizenship +" </li>"; 
+                    applicationformHtml += "  <li  style='  border-bottom: solid;  border-width: thin' class='shade guidetwo '>    11. Name of School last Attended</li>"; 
+                    applicationformHtml += "  <li class=' databasetext'  style='border-right:solid; border-left: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().schoollast +" </li>"; 
+                    applicationformHtml += "  <li  style='border-right: solid; border-bottom: solid;  border-width: thin' class=' shade guidetwo '>     7. Mobile Number </li>"; 
+                    applicationformHtml += "  <li class=' databasetext' style='border-right: solid; border-bottom: solid; border-width: thin;' >  "+ singleApplicant.val().mnumber +" </li>"; 
+                    applicationformHtml += "  <li  style=' border-bottom: solid;  border-width: thin' class=' shade guidetwo '>    12. School Address </li>"; 
+                    applicationformHtml += "  <li class=' databasetext'  style='border-right:solid; border-left: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().schoolad +" </li>"; 
+                    applicationformHtml += "  <li  style='border-right: solid; border-bottom: solid;  border-width: thin' class=' shade guidetwo '>     8. E-mail Address </li>"; 
+                    applicationformHtml += "  <li class=' databasetext'  style='border-right: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().eadd +" </li>"; 
+                    applicationformHtml += "  <li  class='shade'  style='  border-bottom: solid; border-width: thin;'>    </li>"; 
+                    applicationformHtml += "  <li  style='border-right:solid; border-left: solid; border-bottom: solid; border-width: thin;'>    </li>";            
+                    applicationformHtml += "  <li  style='border-right: solid; border-bottom: solid;  border-width: thin' class='  shade guidetwo '>     13. School Sector </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right: solid; border-bottom: solid; border-width: thin;' >  "+ singleApplicant.val().schoolsector +" </li>"; 
+                    applicationformHtml += "  <li style='  border-bottom: solid; border-width: thin;'class='  shade guidetwo '> 15. Type of disability (if applicable) </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right: solid;border-left: solid; border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().disabilty +" </li>"; 
+                applicationformHtml += "</ul> </div> ";
+  
+                // 7 layer
+                applicationformHtml += " <div id='fistfour' style='border-bottom: solid;border-right: solid;border-left: solid; border-width: thin;'>"; 
+                  applicationformHtml += " <ul class=' p-0 m-0'>";   
+                    applicationformHtml += "  <li  style='border-right: solid;  border-width: thin; font-size: 8px;' class='  shade' >  14. Highest Attained Grade/Year Level   </li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right: solid; border-width: thin;'>  "+ singleApplicant.val().attained +" </li>"; 
+                    applicationformHtml += "  <li   class='shade guidetwo '> 16. IP affiliation</li>"; 
+                    applicationformHtml += "  <li class='  databasetext'  style='border-right: solid; border-left: solid; border-width: thin;'>  "+ singleApplicant.val().affiliation +" </li>"; 
+                applicationformHtml += "</ul> </div> ";
+                
+                              
+                // background     
+                applicationformHtml += "<div style='background-color: rgb(233, 233, 233); border: solid; border-width: thin;'> <h6 class='text-uppercase text-center h6 mt-1' id='personalinfor'> <b>Family Background </b></h6> </div>";
+
+                // b 1 layer
+                applicationformHtml += "<div  id='familyback' style='border: solid; border-width: thin;'>";     
+                  applicationformHtml += " <ul class=' p-0 m-0'>";   
+                    applicationformHtml += "  <li style='solid; border-right: solid; border-left: solid;  border-width: thin;'>    </li>";            
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class=' databasetext '  >  Father: "+ singleApplicant.val().fatherstatus +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext  ' >  Mother: "+ singleApplicant.val().motherstatus +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class=' databasetext  ' >  Legal Guardian   </li>";              
+                    applicationformHtml += "  <li  style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='shade guidetwo'  >  17. Name  </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='   databasetext ' >  "+ singleApplicant.val().fathername +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class=' databasetext  '  >  "+ singleApplicant.val().mothername +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext  ' >  "+ singleApplicant.val().guardianname +"   </li>"; 
+                    applicationformHtml += "  <li  style='solid; border-right: solid; border-left: solid;  border-width: thin;' class=' shade guidetwo' >  18. Address </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='   databasetext ' >  "+ singleApplicant.val().fatheraddress +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext  ' >  "+ singleApplicant.val().motheraddress +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='databasetext  '  >  "+ singleApplicant.val().guardianaddress +"   </li>"; 
+                    applicationformHtml += "  <li  style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='  shade guidetwo' > 19. Contact Number  </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext  ' >  "+ singleApplicant.val().fathercNumber +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext  ' >  "+ singleApplicant.val().mothercNumber +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext  ' >  "+ singleApplicant.val().guardiancNumber +"   </li>"; 
+                    applicationformHtml += "  <li  style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='  shade guidetwo'  >  20. Occupation   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext ' >  "+ singleApplicant.val().fatherOccupation +"   </li>"; 
+                    applicationformHtml += "  <li  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().motherOccupation +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext ' >  "+ singleApplicant.val().guardianOccupation +"   </li>"; 
+                    applicationformHtml += "  <li  style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='  shade guidetwo'  >  21. Name of Employer  </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().fatherEmployer +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().motherEmployer +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext ' >  "+ singleApplicant.val().guardianEmployer +"   </li>"; 
+                    applicationformHtml += "  <li style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='  shade guidetwo' >  22. Employer Address   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext ' >  "+ singleApplicant.val().fatherEmployeradd +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().motherEmployeradd +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().guardianEmployeradd +"   </li>"; 
+                    applicationformHtml += "  <li style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='  shade guidetwo'  > 23. Highest Educational Attainment  </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().fatherAttainment +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().motherAttainment +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().guardianAttainment +"   </li>"; 
+                    applicationformHtml += "  <li style='solid; border-right: solid; border-left: solid;  border-width: thin;' class='  shade guidetwo'  > 24. Total Parents Taxable Income   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class='  databasetext '  >  "+ singleApplicant.val().fathertax +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;'  class='  databasetext ' >  "+ singleApplicant.val().mothertax +"   </li>"; 
+                    applicationformHtml += "  <li style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' class=' guidetwo  '  > 24. No. of Siblings in the family 18 years old and below : <u class='databasetext'>"+ singleApplicant.val().nosiblings +" </u>  </li>"; 
+                applicationformHtml += "</ul> </div> ";
+                  
+  // checkbox edit  
+                // b 2 layer
+                applicationformHtml += "<div  style=' border: solid; border-width: thin;'>";
+                  applicationformHtml += "<b class='guidetwo'>25. Is your family a beneficiary of the DSWD's pantawid Pamilyang Pilipino Program (4Ps)? <b class='databasetext'> "+ singleApplicant.val().yesnobenificiary +"</b> </b>";
+                applicationformHtml += "</div> ";
+
+
+                // b 3 layer
+                applicationformHtml += "<div  style=' border: solid; border-width: thin;'> <div id='school'>";
+                  applicationformHtml += " <ul class=' p-0 m-0'>";   
+                    applicationformHtml += "  <li  class='  shade guidetwo'  > 26. School Intended to enroll/enrolled in:   </li>"; 
+                    applicationformHtml += "  <li  class='  databasetext '  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;' >  "+ singleApplicant.val().schoolintended +"   </li>";  
+                    applicationformHtml += "  <li  class='  shade guidetwo'  > 27. School Address: </li>"; 
+                    applicationformHtml += "  <li  class='  databasetext '  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;'>  "+ singleApplicant.val().schoolintendedadd +"   </li>"; 
+  // checkbox edit
+                    applicationformHtml += "  <li  class='  shade guidetwo'  >  28. Type of School:   </li>"; 
+                    applicationformHtml += "  <li  class='  databasetext '  style='border-bottom: solid; border-right: solid; border-left: solid;  border-width: thin;'>  "+ singleApplicant.val().typeintendsector +"   </li>";  
+                    applicationformHtml += "  <li  class='  shade guidetwo'  >    29. Degree Program: </li>"; 
+                    applicationformHtml += "  <li  class='  databasetext '  style=' border-right: solid; border-bottom: solid; border-left: solid;  border-width: thin;' >  "+ singleApplicant.val().degreeprog +"   </li>";  
+                  applicationformHtml += "</ul> </div>  ";
+                  
+
+                  applicationformHtml += "<div   id='assistance' >";
+                    applicationformHtml += "  <li style='font-size: 9px; display: grid; grid-template-columns: 1.8fr .5fr  1.5fr .4fr;'>"; 
+  // checkbox edit 
+                    applicationformHtml += "  <p  class='shade pt-3 guidetwo' > 30. Are you enjoying other sources of educational/financial assistance?  "+ singleApplicant.val().financialassyesno +"  </p>"; 
+                    applicationformHtml += "<p class='guidetwo mt-4'>  If Yes, please specify</p>";
+                    applicationformHtml += " <ul class=' p-0 mb-1'>";    
+                      applicationformHtml += "  <p class='pb-0 m-0 guidetwo text-center'> Type </p>";  
+                      applicationformHtml += "  <p class='pb-0 m-0 guidetwo text-center' >  Grantee Instituion/Agency </p>";   
+                        applicationformHtml += "<ol class=' p-0 m-0'>";   
+                          applicationformHtml += "  <li  class='  databasetext ' style='border-bottom: solid; border-width: thin;'> "+ singleApplicant.val().type1 +"   </li>";  
+                          applicationformHtml += "  <li  class='  databasetext ' style='border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().type2 +"   </li>";  
+                        applicationformHtml += "</ol> ";
+                        applicationformHtml += "<ol class='ml-1 p-0 m-0'>";   
+                          applicationformHtml += "  <li  class=' databasetext ' style='border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().inst1 +"   </li>";  
+                          applicationformHtml += "  <li  class=' databasetext ' style='border-bottom: solid; border-width: thin;'>  "+ singleApplicant.val().inst2 +"   </li>";  
+                        applicationformHtml += "</ol> "; 
+                    applicationformHtml += "</ul> ";  
+                    applicationformHtml += "  </li> </div> </div>  ";
+
+                // b 3 layer
+                    applicationformHtml += "<div id='signature' style='border: solid; border-width: thin; '>";
+                      applicationformHtml += "<p class='guidetwo ' style='line-height: 13px;'> I hereby certify that foregoing statements are true and correct. Any misinformation or witholding of information will automatically disqualify me from the CHED Scholarship Program. I am willing to refund the financial benefits received if such information is discovered after acceptance of the award. <br class='mt-4'> I hereby express my consent for the Commission on Higher Education to collect, record, organize, update or modify, retrieve, consult, use, consolidate, block, erase or destruct my personal data as part of my information. I hereby affirm my right to be informed, object to processing, access and rectify, suspend or withdraw my personal data and be indemnified in case of damages pursuant to the provisions of the Republic Act No. 10173 of the Philippines, Data Privacy Act of 2012 and its corresponding Implementing Rules and Regulations.</p>";
+                      applicationformHtml += " <ul class=' p-0 m-0 mt-4' style='height:40px;'>";   
+                        applicationformHtml += "  <li class=' text-center' style='margin: 0 auto;  -webkit-transform: translate3d(0,-27%,0);' > <div style='position: relative; -webkit-transform: translate3d(0,-20%,0); '>  <img style='width=.1in; height:.50in; -webkit-transform: translate3d(0,15%,0);' src='" + singleApplicant.val().signature + "'/>  <br> <b class='databasetext' style='width:300px; position: absolute; left: 50%;transform: translate(-50%, -50%);'>" + singleApplicant.val().chedsignatre +" </b> </div> <p class='guidetwo  text-center' style='border-top: solid; border-width: thin; width: 200px;'><i>(Over Printed Name of Applicant)</i></p></li>";  
+                        applicationformHtml += "  <li class=' text-center'  style='margin: 0 auto;' > <b class='databasetext  '> "+ singleApplicant.val().dateaccomplished +" </b><p class='guidetwo  text-center' style='border-top: solid; border-width: thin; width: 100px;'><i>Date Accomplished</i></p></li>";  
+                        // applicationformHtml += "  <li style='margin: 0 auto;' class='border databasetext ' >  "+ singleApplicant.val().chedsignatre +"  
+                      applicationformHtml += " </ul>  ";
+                      applicationformHtml += "<p class='guidetwo text-center mt-1 m-0'> <b> <i> Note: Fully accomplished form to be submitted to the CHEDRO</i></b></p>";
+                    applicationformHtml += "</div> "; 
+                  // modal end
+              applicationformHtml += " </div></div> </div> </div> </div> ";  
+            applicationformHtml += "</div>";
+          applicationformHtml += "</td>";  
+          
+  // td
+          applicationformHtml += "<td> <h4  class='text-center' data-toggle='modal' data-target='#"+singleApplicant.val().firstname+"'> Documentary Requirements </h4>"   
+            applicationformHtml += "<div class='modal fade' id='"+singleApplicant.val().firstname+"' role='dialog'>";  
+            
+            applicationformHtml += "<div class='modal-dialog'>  <div class='modal-content content mx-auto' > <div class='modal-header'> ";   
+              applicationformHtml += "   <button type='button' class='close pull-right mb-3' data-dismiss='modal'>&times;</button> ";  
+              applicationformHtml += " <div class='modal-body p-0 m-0 mt-5'>";    
+                applicationformHtml += "<div class='text-center' id='" +singleApplicant.val().acadreq + "'> <p class='text-dark font-weight-bold'> Academic Requirement </p> <img style='width:10in; height:auto;' onclick=printDivreq01('" +singleApplicant.val().acadreq + "') src='" +singleApplicant.val().acadreq + "'/> </div>";
+                applicationformHtml += "<div class='text-center mt-5' id='" +singleApplicant.val().incomereq + "'>  <p class='text-dark font-weight-bold'> Income Requirement </p> <img style='width:10in; height:auto;'  onclick=printDivreq02('" +singleApplicant.val().incomereq + "') src='" +singleApplicant.val().incomereq + "'/> </div>";
+            
+                applicationformHtml += "</div></div></div>";
+            applicationformHtml += "</div>"; 
+              // modalbody
+          applicationformHtml += "</td>";
+          
+  // td        
+          applicationformHtml += "<td > ";
+            applicationformHtml += " <div class='dropdown'> <button class='btn btn-secondary dropdown-toggle' style='text-transform:unset; font-size:16px;' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>   <span class='material-icons'>edit</span></button>";
+            applicationformHtml += "   <div class='dropdown-menu' aria-labelledby='dropdownMenuButton' >";
+              applicationformHtml += "<label class='px-3 text-dark' onclick=addqualified('"+singleApplicant.key+"')><input type='checkbox' class='p-0 mr-2' style='text-transform:unset;' onClick='ckChange(this)' name='scholarship' id='"+singleApplicant.key+"'> Qualified </label>";  
+              applicationformHtml += "<label class='px-3 text-dark' ><input type='checkbox' onclick=disqualified('"+singleApplicant.key+"') class='p-0 mr-2' style='text-transform:unset;'  onClick='ckChange(this)' name='scholarship' id='"+singleApplicant.key+"'> Disqualified </label>";  
+              // applicationformHtml += "<label class='px-3 text-dark'><input type='checkbox' class='p-0 mr-2' style='text-transform:unset;' onclick=addFSqualified('"+singleApplicant.key+"')> Record Applicant </label>";  
+              // applicationformHtml += "<button class='p-0 m-0 form-control btn btn-success ' style='text-transform:unset;'  onclick=addqualified('"+singleApplicant.key+"')>  add as CHED-FS scholar  </button> <br>";  
+              // applicationformHtml += "<button class='p-0 m-0 form-control btn btn-danger '  style='text-transform:unset;' onclick=deleteapplicant('"+singleApplicant.key+"')> delete  </button> <br>";  
+
+              // applicationformHtml += "<label class='px-3 text-dark')><input type='checkbox' class='p-0 mr-2' style='text-transform:unset;' onClick='ckChange("+singleApplicant.key+")' name='scholarship' id='td'> CHED-TD </label>";  
+              // applicationformHtml += "<label class='px-3 text-dark' onclick=addFSqualified('"+singleApplicant.key+"')><input type='checkbox' class='p-0 mr-2' style='text-transform:unset;'  onClick='ckChange("+singleApplicant.key+")' name='scholarship' id='fs'> CHED-FS </label>";  
+              
+              
+              applicationformHtml += "</div></div>";
+            
+          applicationformHtml += "</td>";
+
+          
+
+        applicationformHtml += "</form> </tr>"; 
+          
+
+
+        });
+        $("#applicationform").html(applicationformHtml); 
+
+
+        }
+        });
+    
+        function ckChange(ckType){
+          var ckName = document.getElementsByName(ckType.name);
+          var checked = document.getElementById(ckType.id); 
+                if (checked.checked) {
+                  for(var i=0; i < ckName.length; i++){
+
+                      if(!ckName[i].checked){
+                          ckName[i].disabled = true;
+                      }else{
+                          ckName[i].disabled = false;
+                      }
+                  } 
+                }
+                else {
+                  for(var i=0; i < ckName.length; i++){
+                    ckName[i].disabled = false;
+                  } 
+                } 
+        };
+      
+
+
+    function addqualified(key){ 
+      var addqualifiedRef = firebase.database().ref().child("Ched/Ched_applicants").child(key); 
+      
+        
+      // firebase refs
+    var scholars = firebase.database().ref().child("Ched/Qualified_Scholars/");   
+
+    addqualifiedRef.on("value", function(snapshot) { 
+        // var qualifiedID = snapshot.val().image
+        var qualifiedlast = snapshot.val().lastname
+        var qualifiedfirst = snapshot.val().firstname
+        var qualifiedmiddle = snapshot.val().middlename
+        var qualifiedyearlevel = snapshot.val().yearlevel
+        var qualifiedcelno = snapshot.val().mnumber
+        var qualifieddegreeprog = snapshot.val().degreeprog
+        var user = snapshot.val().uid
+  
+      document.getElementById('award').innerHTML =  "<dialog style='width:350px; height:150px;' id='"+qualifiedlast+"'>  <p class='p-0 m-0' id='alert'>"+qualifiedlast+", "+qualifiedfirst+", "+qualifiedmiddle+" </p><div class='text-center pt-2 '> <input style='width:300px;' class='mb-2' placeholder='Enter Award Number' id='awardno' > <br> <button class='mr-2 btn p-2 px-3 btn-success' id='awardbtn'> save</button> <button  class='ml-2 btn p-2 px-3 btn-danger' id='closebtn'> close</button> </div> </dialog>";
+    
+      $("#closebtn").click(function(){ 
+        $("dialog#"+qualifiedlast+"").fadeOut();   
+      });
+
+      $("#awardbtn").click(function(){ 
+        var awardno = $('#awardno').val();    
+
+          if(awardno != ""){
+            var qualifiedData = {
+              // "idpicture" : qualifiedID,
+              "lastname" : qualifiedlast,
+              "firstname" : qualifiedfirst,
+              "middlename" : qualifiedmiddle,
+              "yearlevel" : qualifiedyearlevel,
+              "mnumber" : qualifiedcelno,
+              "degreeprog" : qualifieddegreeprog,
+              "userid" : user,
+              "awardno" : awardno,
+            };
+            document.getElementById('resultched').innerHTML = "<b> "+ qualifiedlast + "</b> was added as qualified CHED Scholar";
+            scholars.push(qualifiedData);
+            $("dialog#"+qualifiedlast+"").fadeOut();   
+          // return addTDqualifiedRef.remove()
+            
+          }
+          else{
+            // window.alert("Please fill out Award No.") 
+            document.getElementById('alert').innerHTML =  "  <i class='text-center text-danger font-weight-bold'>Please enter "+ qualifiedlast+"'s award no. </i>";
+
+          }
+    
+    
+      });
+
+
+    
+  
+      }, function (errorObject) {
+          console.log("The read failed: " + errorObject.code);
+      });
+    }
+
+
+
+    
+    function disqualified(key){ 
+      var disqualified = firebase.database().ref().child("Ched/Ched_applicants").child(key); 
+      
+      // firebase refs
+    var disqualifiedapplicants = firebase.database().ref().child("Ched/Disqualified_applicants/");   
+
+    disqualified.on("value", function(snapshot) {
+      
+      var qualifiedlast = snapshot.val().firstname
+
+      document.getElementById('award').innerHTML =  "<dialog style='text-align: center; width: 350px;height:130px;' id='"+qualifiedlast+"'> <button id='exit' class='close float-right' data-dismiss='modal'>&times;</button> <br> <i class='font-weight-bold'>"+ qualifiedlast + "</i> did not qualify. <br> <button  class='ml-2 btn p-2 px-3 btn-danger' id='record'> record</button> <button  class='ml-2 btn p-2 px-3 btn-danger' id='delete'> delete </button> </div> </dialog>";
+        $("#record").click(function(){ 
+          $("dialog#"+qualifiedlast+"").fadeOut();   
+          var dis = snapshot.val();    
+          disqualifiedapplicants.push(dis);
+          document.getElementById('resultched').innerHTML = "<b> "+ qualifiedlast + "'s' </b> application was added to <a href='#'>Recorded Applicants.</a>";
+        });
+
+        $("#exit").click(function(){ 
+          $("dialog#"+qualifiedlast+"").fadeOut();   
+        });
+
+        $("#delete").click(function(){ 
+          // disqualifiedapplicants.remove();
+          console.log('deleted')
+          $("dialog#"+qualifiedlast+"").fadeOut();   
+          document.getElementById('resultched').innerHTML = "<b> "+ qualifiedlast + "'s </b> application record was deleted.";
+
+        });
+
+      
+      
+
+      }, function (errorObject) {
+          console.log("The read failed: " + errorObject.code);
+      });
+    }
+
+    
+  //   function deleteapplicant(key){
+  //     var deleteapplicantRef = firebase.database().ref().child("Ched/Ched_applicants").child(key); 
+  
+  //     // return deleteapplicantRef.remove()
+      
+  
+  //  }
+
+
+
+
+
+    
+    
+    
+    
+    function printDiv(printme) {
+      var printContents = document.getElementById(printme).innerHTML;
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+  }
+  
+  function printDivreq01(acadreq) {
+      var printContents = document.getElementById(acadreq).innerHTML;
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+  }
+
+  function printDivreq02(incomereq) {
+      var printContents = document.getElementById(incomereq).innerHTML;
+      var originalContents = document.body.innerHTML;
+
+      document.body.innerHTML = printContents;
+
+      window.print();
+
+      document.body.innerHTML = originalContents;
+  }
+      
+  </script>
+  
+  <script>
+    var disqualifiedList = firebase.database().ref().child("Ched/Disqualified_applicants").orderByChild("applicantslist");
+  
+    disqualifiedList.on("value", function(disapplicationform){
+        if(disapplicationform.exists){
+        var disapplicationformHtml =""; 
+        disapplicationform.forEach(function(singleDisApplicant){
+          disapplicantslist = disapplicantslist + 1;
+  
+          disapplicationformHtml += "<tr> <form> ";  
+            disapplicationformHtml += "<td> <img style='width:.5in; height:.5in;' src='" +singleDisApplicant.val().image + "'/></td>"; 
+  
+            disapplicationformHtml += "<h4><td>    " +singleDisApplicant.val().lastname + "</td> " ; 
+            disapplicationformHtml += "<td>  " +singleDisApplicant.val().firstname + "</td> " ; 
+            disapplicationformHtml += "<td> " +singleDisApplicant.val().middlename + "</td> </h4>" ; 
+            disapplicationformHtml += "<td class='text-center'>    " +singleDisApplicant.val().degreeprog + "</td> " ; 
+            disapplicationformHtml += "<td  class='text-center'>    " +singleDisApplicant.val().yearlevel + "</td> " ; 
+  
+          
+  
+              disapplicationformHtml += "</form> </tr>"; 
+          
+  
+  
+        });
+        $("#disqualified").html(disapplicationformHtml); 
+  
+  
+        }
+        });
+    
+  </script>
+   
+</div>
+</body>
+</html>
