@@ -2,7 +2,7 @@
   "name": "thesissemi",
   "version": "1.0.0",
   "description": "scholarship information system with sms",
-  "main": "app.js",
+  "main": "server.js",
   "engines": {
     "node": "12.11.1"
   },
