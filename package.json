@@ -1,7 +1,7 @@
 {
-  "name": "chedtesda_information",
+  "name": "thesissemi",
   "version": "1.0.0",
-  "description": "",
+  "description": "scholarship information system with sms",
   "main": "app.js",
   "engines": {
     "node": "12.11.1"
@@ -10,13 +10,24 @@
     "example": "public"
   },
   "dependencies": {
-    "nexmo": "^2.9.1"
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "nexmo": "^2.9.1",
+    "socket.io": "^3.0.3"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-    "start": "nodemon --exec babel-node src/app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gloriefel/thesissemi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Gloriefel/thesissemi/issues"
+  },
+  "homepage": "https://github.com/Gloriefel/thesissemi#readme"
 }
