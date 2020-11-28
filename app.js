@@ -31,27 +31,27 @@ app.get('/', (req, res) => {
 
 //catch form submit
 app.post('/', (req, res) => {
-    // res.send(req.body);
-    // console.log(req.body);
-    const number = req.body.number;
-    const text = req.body.text;
+    res.send(req.body);
+    console.log(req.body);
+    // const number = req.body.number;
+    // const text = req.body.text;
 
-    nexmo.message.sendSms(
-        '09125161614', number, text, {type: 'unicode'},
-        (err, responseData) =>{
-            if(err){
-                console.log(err);
+    // nexmo.message.sendSms(
+    //     '09125161614', number, text, {type: 'unicode'},
+    //     (err, responseData) =>{
+    //         if(err){
+    //             console.log(err);
 
-            }else {
-                console.dir(responseData);
-                const data ={
-                    id: responseData.messages[0]['message-id'],
-                    number: responseData.messages[0]['to']
-                }
-                io.emit('smsStatus', data);
-            }
-          }
-        );
+    //         }else {
+    //             console.dir(responseData);
+    //             const data ={
+    //                 id: responseData.messages[0]['message-id'],
+    //                 number: responseData.messages[0]['to']
+    //             }
+    //             io.emit('smsStatus', data);
+    //         }
+    //       }
+    //     );
 });
 
 
